@@ -40,9 +40,18 @@ function Navbar() {
 
             </div>
 
-            <button className="quote-btn">
-                Request a Quote
-            </button>
+          <button
+            className="quote-btn"
+            onClick={() => {
+             document
+            .getElementById("contact")
+            .scrollIntoView({
+                behavior: "smooth"
+            });
+    }}
+>
+    Request a Quote
+</button>
 
         </nav>
     );

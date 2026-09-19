@@ -502,3 +502,803 @@ body,
     }
 
 }
+
+
+/* =========================
+   ABOUT US
+========================= */
+
+.about {
+    width: 100%;
+    padding: 100px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    background: #f7f9fc;
+}
+
+/* About Image */
+
+.about-image {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 520px;
+    height: 380px;
+    object-fit: contain;
+    border-radius: 12px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(7, 27, 53, 0.08);
+}
+
+
+/* About Content */
+
+.about-content {
+    width: 50%;
+    max-width: 600px;
+}
+
+.about-tag {
+    color: #dcae32;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.about-content h2 {
+    color: #071b35;
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.about-content h2 span {
+    color: #dcae32;
+}
+
+.about-content > p:not(.about-tag) {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+
+/* Stats */
+
+.about-stats {
+    display: flex;
+    gap: 45px;
+    margin-top: 35px;
+}
+
+.stat {
+    text-align: left;
+}
+
+.stat h3 {
+    color: #071b35;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.stat p {
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* =========================
+   ABOUT RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .about {
+        flex-direction: column;
+        gap: 50px;
+        padding: 80px 6%;
+    }
+
+    .about-image,
+    .about-content {
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .about-content h2 {
+        font-size: 36px;
+    }
+
+    .about-stats {
+        justify-content: center;
+    }
+
+    .stat {
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .about {
+        padding: 60px 6%;
+    }
+
+    .about-image img {
+        height: 280px;
+    }
+
+    .about-content h2 {
+        font-size: 30px;
+    }
+
+    .about-stats {
+        gap: 20px;
+    }
+
+    .stat h3 {
+        font-size: 24px;
+    }
+}
+
+
+
+/* =========================
+   MANUFACTURERS
+========================= */
+
+.manufacturers {
+    width: 100%;
+    padding: 90px 8%;
+    background: #ffffff;
+}
+
+.brands-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.brand-card {
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f7f9fc;
+    border: 1px solid #e5e9ef;
+    border-radius: 10px;
+
+    color: #071b35;
+    font-size: 20px;
+    font-weight: 700;
+
+    transition: all 0.3s ease;
+}
+
+.brand-card:hover {
+    transform: translateY(-6px);
+    border-color: #dcae32;
+    box-shadow: 0 10px 25px rgba(7, 27, 53, 0.10);
+}
+
+
+/* Responsive */
+
+@media (max-width: 700px) {
+
+    .brands-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    .brands-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+
+/* =========================
+   REPAIR & SERVICE
+========================= */
+
+.repair-service {
+    width: 100%;
+    padding: 90px 8%;
+    background: #f7f9fc;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.service-card {
+    padding: 40px 30px;
+    background: white;
+    border: 1px solid #e5e9ef;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(7, 27, 53, 0.12);
+}
+
+.service-icon {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    color: #071b35;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.service-card button {
+    padding: 11px 22px;
+    background: #071b35;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.service-card button:hover {
+    background: #dcae32;
+    color: #071b35;
+}
+
+
+/* Responsive */
+
+@media (max-width: 700px) {
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* =========================
+   DEALS / TOP SELLERS
+========================= */
+
+.deals {
+    width: 100%;
+    padding: 90px 8%;
+    background: #ffffff;
+}
+
+.top-sellers-grid {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 5px 25px;
+}
+
+.top-sellers-grid::-webkit-scrollbar {
+    height: 6px;
+}
+
+.top-sellers-grid::-webkit-scrollbar-thumb {
+    background: #dcae32;
+    border-radius: 10px;
+}
+
+.seller-card {
+    flex: 0 0 280px;
+    background: #f7f9fc;
+    border: 1px solid #e5e9ef;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.seller-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(7, 27, 53, 0.12);
+}
+
+.product-image {
+    height: 190px;
+    background: #e9eef5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-image span {
+    color: #071b35;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.product-info {
+    padding: 25px;
+}
+
+.product-category {
+    color: #dcae32;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.product-info h3 {
+    color: #071b35;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.product-price {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.product-info button {
+    width: 100%;
+    padding: 11px;
+    background: #071b35;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.product-info button:hover {
+    background: #dcae32;
+    color: #071b35;
+}
+
+
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact {
+    width: 100%;
+    padding: 100px 8%;
+    display: flex;
+    justify-content: space-between;
+    gap: 70px;
+    background: #f7f9fc;
+}
+
+
+/* Contact Content */
+
+.contact-content {
+    width: 45%;
+    max-width: 550px;
+}
+
+.contact-tag {
+    color: #dcae32;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.contact-content h2 {
+    color: #071b35;
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.contact-content h2 span {
+    color: #dcae32;
+}
+
+.contact-description {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+
+/* Contact Details */
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.contact-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #071b35;
+    border-radius: 8px;
+    font-size: 20px;
+}
+
+.contact-item h3 {
+    color: #071b35;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.contact-item p {
+    color: #666;
+    font-size: 14px;
+}
+
+
+/* Contact Form */
+
+.contact-form {
+    width: 50%;
+    max-width: 600px;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 35px rgba(7, 27, 53, 0.08);
+}
+
+.contact-form h3 {
+    color: #071b35;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #dfe3e8;
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+    color: #333;
+    background: white;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: #dcae32;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    padding: 14px;
+    background: #dcae32;
+    color: #071b35;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   CONTACT RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    .contact {
+        flex-direction: column;
+        padding: 80px 6%;
+    }
+
+    .contact-content,
+    .contact-form {
+        width: 100%;
+        max-width: 700px;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .contact {
+        padding: 60px 6%;
+    }
+
+    .contact-content h2 {
+        font-size: 32px;
+    }
+
+    .contact-form {
+        padding: 25px;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    width: 100%;
+    background: #071b35;
+    color: white;
+}
+
+.footer-main {
+    width: 100%;
+    padding: 70px 8%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 70px;
+}
+
+.footer-about img {
+    width: 160px;
+    background: white;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.footer-about p {
+    max-width: 380px;
+    color: #c8d0da;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.footer-links,
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #c8d0da;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #dcae32;
+}
+
+.footer-contact p {
+    color: #c8d0da;
+    font-size: 14px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 20px 8%;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #aeb8c4;
+    font-size: 13px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 700px) {
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 60px 6%;
+    }
+
+    .footer-bottom {
+        padding: 20px 6%;
+    }
+
+}
+
+
+
+/* =========================
+   CHATBOT
+========================= */
+
+.chat-widget {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 2000;
+}
+
+.chat-toggle {
+    width: 58px;
+    height: 58px;
+    border: none;
+    border-radius: 50%;
+    background: #dcae32;
+    color: #071b35;
+    font-size: 25px;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.chat-box {
+    width: 350px;
+    height: 480px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.chat-header {
+    padding: 18px 20px;
+    background: #071b35;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chat-header h3 {
+    font-size: 17px;
+    margin-bottom: 4px;
+}
+
+.chat-header p {
+    font-size: 12px;
+    color: #dcae32;
+}
+
+.close-chat {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.chat-body {
+    height: calc(100% - 75px);
+    padding: 18px;
+    overflow-y: auto;
+    background: #f7f9fc;
+}
+
+.bot-message,
+.user-message {
+    max-width: 85%;
+    padding: 11px 14px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.bot-message {
+    background: white;
+    color: #333;
+    margin-right: auto;
+}
+
+.user-message {
+    background: #071b35;
+    color: white;
+    margin-left: auto;
+}
+
+.faq-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 10px 12px;
+    background: white;
+    color: #071b35;
+    border: 1px solid #dcae32;
+    border-radius: 6px;
+    text-align: left;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.faq-question:hover {
+    background: #dcae32;
+}
+
+
+/* Mobile */
+
+@media (max-width: 450px) {
+
+    .chat-widget {
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .chat-box {
+        width: calc(100vw - 30px);
+        height: 450px;
+    }
+
+}

@@ -56,9 +56,17 @@ function Solutions() {
                             {solution.description}
                         </p>
 
-                        <button>
-                            Explore
-                        </button>
+                        <button
+    onClick={() => {
+        document
+            .getElementById("contact")
+            .scrollIntoView({
+                behavior: "smooth"
+            });
+    }}
+>
+    Explore
+</button>
 
                     </div>
 

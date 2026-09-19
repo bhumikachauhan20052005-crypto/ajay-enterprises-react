@@ -23,13 +23,31 @@ function Hero() {
 
                 <div className="hero-buttons">
 
-                    <button className="primary-btn">
-                        Explore Solutions
-                    </button>
+                    <button
+                      className="primary-btn"
+                        onClick={() => {
+                            document
+                         .getElementById("solutions")
+                          .scrollIntoView({
+                           behavior: "smooth"
+            });
+    }}
+>
+    Explore Solutions
+</button>
 
-                    <button className="secondary-btn">
-                        Request a Quote
-                    </button>
+                    <button
+    className="secondary-btn"
+    onClick={() => {
+        document
+            .getElementById("contact")
+            .scrollIntoView({
+                behavior: "smooth"
+            });
+    }}
+>
+    Request a Quote
+</button>
 
                 </div>
 
