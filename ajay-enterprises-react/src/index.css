@@ -1,0 +1,40 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    min-width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+#root {
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   BASIC ELEMENTS
+========================= */
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+img {
+    max-width: 100%;
+}
