@@ -1,81 +1,135 @@
+
+import React from "react";
+
+import ventilatorImage from "../assets/ventilatorImage.jpg";
+import ecgImage from "../assets/ecg.jpg";
+import fetalMonitorImage from "../assets/fetalmonitor.jpg";
+import defibrillatorImage from "../assets/defibrillator.jpg";
+import bipapImage from "../assets/BiPAPCPAP.jpg";
+import patientMonitorImage from "../assets/PatientMonitor.jpg";
+import pulseOximeterImage from "../assets/pulseoximeter.jpg";
+import infusionPumpImage from "../assets/SyringeInfusion Pump.jpg";
+import laproCameraImage from "../assets/Laparoscopy-Thumb.jpg";
+import shaverImage from "../assets/shaversystem.jpg";
 function Solutions() {
-    const solutions = [
-        {
-            title: "ICU Equipment",
-            description: "Reliable equipment solutions for intensive care units."
-        },
-        {
-            title: "OT Equipment",
-            description: "Essential equipment for modern operation theatres."
-        },
-        {
-            title: "NICU Equipment",
-            description: "Specialized solutions for neonatal care."
-        },
-        {
-            title: "Hospital Equipment",
-            description: "Complete equipment solutions for hospitals and clinics."
-        }
-    ];
 
-    return (
-        <section id="solutions" className="solutions">
 
-            <div className="section-heading">
+       
+    const categories = [
+  {
+    name: "Ventilators",
+    image: ventilatorImage,
+    subcategories: [
+      "Transport Ventilators",
+      "ICU Ventilators"
+    ]
+  },
 
-                <p className="section-tag">
-                    OUR SOLUTIONS
-                </p>
+  {
+    name: "Shaver Systems",
+    image: shaverImage,
+    subcategories: []
+  },
 
-                <h2>
-                    Healthcare Equipment
-                </h2>
+  {
+    name: "Endo / Lapro Cameras",
+    image: laproCameraImage,
+    subcategories: []
+  },
 
-                <p>
-                    Explore our range of medical and surgical
-                    equipment solutions.
-                </p>
+  {
+    name: "Patient Monitors",
+    image: patientMonitorImage,
+    subcategories: []
+  },
+
+  {
+    name: "Defibrillators",
+    image: defibrillatorImage,
+    subcategories: []
+  },
+
+  {
+    name: "BiPAP / CPAP",
+    image: bipapImage,
+    subcategories: []
+  },
+
+  {
+    name: "Syringe / Infusion Pumps",
+    image: infusionPumpImage,
+    subcategories: []
+  },
+
+  {
+    name: "Pulse Oximeters",
+    image: pulseOximeterImage,
+    subcategories: []
+  },
+
+  {
+    name: "Fetal Monitors",
+    image: fetalMonitorImage,
+    subcategories: []
+  },
+
+  {
+    name: "ECG Machines",
+    image: ecgImage,
+    subcategories: []
+  }
+];
+  
+
+  return (
+    <section className="solutions" id="solutions">
+
+      <div className="solutions-heading">
+        <h2>Our Solutions</h2>
+        <p>Explore our range of medical equipment</p>
+      </div>
+
+      <div className="categories-grid">
+
+        {categories.map((category, index) => (
+
+          <div className="category-card" key={index}>
+
+            <div className="category-image">
+              <img
+                src={category.image}
+                alt={category.name}
+              />
+            </div>
+
+            <div className="category-content">
+
+              <h3>{category.name}</h3>
+
+              {category.subcategories.length > 0 && (
+                <div className="subcategories">
+
+                  {category.subcategories.map((sub, i) => (
+                    <p key={i}>{sub}</p>
+                  ))}
+
+                </div>
+              )}
+
+              <button className="view-products">
+                View Products →
+              </button>
 
             </div>
 
+          </div>
 
-            <div className="solutions-grid">
+        ))}
 
-                {solutions.map((solution, index) => (
+      </div>
 
-                    <div
-                        className="solution-card"
-                        key={index}
-                    >
-
-                        <h3>
-                            {solution.title}
-                        </h3>
-
-                        <p>
-                            {solution.description}
-                        </p>
-
-                        <button
-    onClick={() => {
-        document
-            .getElementById("contact")
-            .scrollIntoView({
-                behavior: "smooth"
-            });
-    }}
->
-    Explore
-</button>
-
-                    </div>
-
-                ))}
-
-            </div>
-
-        </section>
-    );
+    </section>
+  );
 }
 
 export default Solutions;
