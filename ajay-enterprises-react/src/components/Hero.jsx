@@ -1,70 +1,105 @@
-import companyBanner from "../assets/company-banner.jpeg";
+import React from "react";
+import "../hero.css";
 
-function Hero() {
-    return (
-        <section id="home" className="hero">
+const Hero = () => {
 
-            <div className="hero-content">
+  const scrollToSolutions = () => {
+    document
+      .getElementById("solutions")
+      ?.scrollIntoView({ behavior: "smooth" });
+  };
 
-                <p className="hero-tag">
-                    SURGICAL EQUIPMENT SPECIALIST
-                </p>
+  const scrollToContact = () => {
+    document
+      .getElementById("contact")
+      ?.scrollIntoView({ behavior: "smooth" });
+  };
 
-                <h1>
-                    Complete Healthcare
-                    <span> Solutions</span>
-                </h1>
+  return (
+    <section className="hero">
 
-                <p className="hero-description">
-                    Providing reliable medical and surgical
-                    equipment solutions for hospitals,
-                    clinics and healthcare facilities.
-                </p>
+      <div className="hero-overlay">
 
-                <div className="hero-buttons">
+        <div className="hero-content">
 
-                    <button
-                      className="primary-btn"
-                        onClick={() => {
-                            document
-                         .getElementById("solutions")
-                          .scrollIntoView({
-                           behavior: "smooth"
-            });
-    }}
->
-    Explore Solutions
-</button>
+          <div className="company-name">
+            AJAY ENTERPRISES
+          </div>
 
-                    <button
-    className="secondary-btn"
-    onClick={() => {
-        document
-            .getElementById("contact")
-            .scrollIntoView({
-                behavior: "smooth"
-            });
-    }}
->
-    Request a Quote
-</button>
+          <h1>
+            Complete Medical
+            <br />
+            <span>Solutions</span>
+            <br />
+            for a Healthier Tomorrow
+          </h1>
 
-                </div>
+          <p>
+            Trusted partner in supplying high-quality medical equipment
+            to hospitals, clinics and healthcare professionals across India.
+          </p>
 
+          <div className="hero-buttons">
+
+            <button
+              className="hero-btn primary-btn"
+              onClick={scrollToSolutions}
+            >
+              Explore Our Products
+              <span>→</span>
+            </button>
+
+            <button
+              className="hero-btn secondary-btn"
+              onClick={scrollToContact}
+            >
+              Request a Quote
+            </button>
+
+          </div>
+
+          <div className="hero-features">
+
+            <div className="hero-feature">
+              <div className="feature-icon">✓</div>
+              <div>
+                <strong>Trusted</strong>
+                <span>Brands</span>
+              </div>
             </div>
 
-
-            <div className="hero-image">
-
-                <img
-                    src={companyBanner}
-                    alt="Ajay Enterprises Medical Equipment"
-                />
-
+            <div className="hero-feature">
+              <div className="feature-icon">⚙</div>
+              <div>
+                <strong>Quality</strong>
+                <span>Assurance</span>
+              </div>
             </div>
 
-        </section>
-    );
-}
+            <div className="hero-feature">
+              <div className="feature-icon">🚚</div>
+              <div>
+                <strong>Timely</strong>
+                <span>Delivery</span>
+              </div>
+            </div>
+
+            <div className="hero-feature">
+              <div className="feature-icon">♧</div>
+              <div>
+                <strong>Dedicated</strong>
+                <span>Support</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+  );
+};
 
 export default Hero;
