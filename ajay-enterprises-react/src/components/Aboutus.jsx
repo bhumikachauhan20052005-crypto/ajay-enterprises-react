@@ -2,13 +2,6 @@ function About() {
     return (
         <section id="about" className="about">
 
-            <div className="about-image">
-                <img
-                    src="/ajay-enterprises-logo.jpg"
-                    alt="Ajay Enterprises"
-                />
-            </div>
-
             <div className="about-content">
 
                 <p className="about-tag">

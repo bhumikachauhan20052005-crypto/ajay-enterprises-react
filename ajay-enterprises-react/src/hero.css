@@ -3,34 +3,34 @@
 ========================================= */
 
 .hero {
-  width: 100%;
-  min-height: calc(100vh - 90px);
+    width: 100%;
+    min-height: calc(100vh - 90px);
 
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    overflow: hidden;
 
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 
-  background-color: #f2f9ff;
+    background-color: #f2f9ff;
 
-  /*
-    Medical hero image + smooth fade
-    into the website light-blue background
-  */
-  background-image:
-    linear-gradient(
-      to bottom,
-      rgba(242, 249, 255, 0) 60%,
-      rgba(242, 249, 255, 0.35) 78%,
-      rgba(242, 249, 255, 0.75) 90%,
-      #f2f9ff 100%
-    ),
-    url("./assets/medical-hero-bg.png");
+    /*
+      Medical hero image + smooth fade
+      into the website light-blue background
+    */
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba(242, 249, 255, 0) 60%,
+            rgba(242, 249, 255, 0.35) 78%,
+            rgba(242, 249, 255, 0.75) 90%,
+            #f2f9ff 100%
+        ),
+        url("./assets/medical-hero-bg.png");
 
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 
@@ -39,15 +39,15 @@
 ========================================= */
 
 .hero-overlay {
-  width: 100%;
-  min-height: calc(100vh - 90px);
+    width: 100%;
+    min-height: calc(100vh - 90px);
 
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 
-  padding: 70px 7%;
+    padding: 70px 7%;
 
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 
@@ -56,11 +56,11 @@
 ========================================= */
 
 .hero-content {
-  width: 52%;
-  max-width: 700px;
+    width: 52%;
+    max-width: 700px;
 
-  position: relative;
-  z-index: 2;
+    position: relative;
+    z-index: 2;
 }
 
 
@@ -69,27 +69,27 @@
 ========================================= */
 
 .company-name {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 
-  color: #12345b;
+    color: #12345b;
 
-  font-size: 15px;
-  font-weight: 700;
+    font-size: 15px;
+    font-weight: 700;
 
-  letter-spacing: 5px;
+    letter-spacing: 5px;
 
-  margin-bottom: 22px;
+    margin-bottom: 22px;
 }
 
 .company-name::after {
-  content: "";
+    content: "";
 
-  width: 55px;
-  height: 2px;
+    width: 55px;
+    height: 2px;
 
-  background: #1769d2;
+    background: #1769d2;
 }
 
 
@@ -98,19 +98,19 @@
 ========================================= */
 
 .hero h1 {
-  margin: 0 0 24px;
+    margin: 0 0 24px;
 
-  color: #102d52;
+    color: #102d52;
 
-  font-size: clamp(42px, 4.3vw, 68px);
+    font-size: clamp(42px, 4.3vw, 68px);
 
-  line-height: 1.05;
+    line-height: 1.05;
 
-  font-weight: 700;
+    font-weight: 700;
 }
 
 .hero h1 span {
-  color: #1267d6;
+    color: #1267d6;
 }
 
 
@@ -119,15 +119,15 @@
 ========================================= */
 
 .hero p {
-  max-width: 600px;
+    max-width: 600px;
 
-  margin: 0 0 30px;
+    margin: 0 0 30px;
 
-  color: #40536b;
+    color: #40536b;
 
-  font-size: 17px;
+    font-size: 17px;
 
-  line-height: 1.7;
+    line-height: 1.7;
 }
 
 
@@ -136,12 +136,12 @@
 ========================================= */
 
 .hero-buttons {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 
-  gap: 15px;
+    gap: 15px;
 
-  margin-bottom: 42px;
+    margin-bottom: 42px;
 }
 
 
@@ -150,24 +150,24 @@
 ========================================= */
 
 .hero-btn {
-  border: none;
+    border: none;
 
-  padding: 15px 25px;
+    padding: 15px 25px;
 
-  border-radius: 30px;
+    border-radius: 30px;
 
-  font-size: 16px;
-  font-weight: 600;
+    font-size: 16px;
+    font-weight: 600;
 
-  cursor: pointer;
+    cursor: pointer;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  gap: 14px;
+    gap: 14px;
 
-  transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 
@@ -176,22 +176,22 @@
 ========================================= */
 
 .primary-btn {
-  background: #dcae32;
-  color: #071b35;
+    background: #dcae32;
+    color: #071b35;
 }
 
 .primary-btn span {
-  font-size: 22px;
+    font-size: 22px;
 }
 
 .primary-btn:hover {
-  background: #c99b25;
-  color: #071b35;
+    background: #c99b25;
+    color: #071b35;
 
-  transform: translateY(-3px);
+    transform: translateY(-3px);
 
-  box-shadow:
-    0 8px 20px rgba(220, 174, 50, 0.30);
+    box-shadow:
+        0 8px 20px rgba(220, 174, 50, 0.30);
 }
 
 
@@ -200,22 +200,22 @@
 ========================================= */
 
 .secondary-btn {
-  background: rgba(255, 255, 255, 0.90);
+    background: rgba(255, 255, 255, 0.90);
 
-  color: #12345b;
+    color: #12345b;
 
-  border: 2px solid #1267d6;
+    border: 2px solid #1267d6;
 }
 
 .secondary-btn:hover {
-  background: #1267d6;
+    background: #1267d6;
 
-  color: white;
+    color: white;
 
-  transform: translateY(-3px);
+    transform: translateY(-3px);
 
-  box-shadow:
-    0 8px 20px rgba(18, 103, 214, 0.20);
+    box-shadow:
+        0 8px 20px rgba(18, 103, 214, 0.20);
 }
 
 
@@ -224,13 +224,13 @@
 ========================================= */
 
 .hero-features {
-  display: flex;
+    display: flex;
 
-  align-items: center;
+    align-items: center;
 
-  gap: 28px;
+    gap: 28px;
 
-  flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 
@@ -239,30 +239,30 @@
 ========================================= */
 
 .hero-feature {
-  display: flex;
+    display: flex;
 
-  align-items: center;
+    align-items: center;
 
-  gap: 10px;
+    gap: 10px;
 
-  color: #183452;
+    color: #183452;
 
-  font-size: 13px;
+    font-size: 13px;
 
-  line-height: 1.3;
+    line-height: 1.3;
 }
 
 .hero-feature strong,
 .hero-feature span {
-  display: block;
+    display: block;
 }
 
 .hero-feature strong {
-  font-weight: 700;
+    font-weight: 700;
 }
 
 .hero-feature span {
-  font-weight: 500;
+    font-weight: 500;
 }
 
 
@@ -271,23 +271,23 @@
 ========================================= */
 
 .feature-icon {
-  width: 42px;
-  height: 42px;
+    width: 42px;
+    height: 42px;
 
-  flex-shrink: 0;
+    flex-shrink: 0;
 
-  border: 2px solid #183452;
+    border: 2px solid #183452;
 
-  border-radius: 50%;
+    border-radius: 50%;
 
-  display: flex;
+    display: flex;
 
-  align-items: center;
-  justify-content: center;
+    align-items: center;
+    justify-content: center;
 
-  font-size: 18px;
+    font-size: 18px;
 
-  background: rgba(255, 255, 255, 0.80);
+    background: rgba(255, 255, 255, 0.80);
 }
 
 
@@ -297,22 +297,21 @@
 
 @media (max-width: 1200px) {
 
-  .hero-overlay {
-    padding: 60px 5%;
-  }
+    .hero-overlay {
+        padding: 60px 5%;
+    }
 
-  .hero-content {
-    width: 55%;
-  }
+    .hero-content {
+        width: 55%;
+    }
 
-  .hero h1 {
-    font-size: 52px;
-  }
+    .hero h1 {
+        font-size: 52px;
+    }
 
-  .hero-features {
-    gap: 20px;
-  }
-
+    .hero-features {
+        gap: 20px;
+    }
 }
 
 
@@ -322,34 +321,33 @@
 
 @media (max-width: 900px) {
 
-  .hero {
-    min-height: 650px;
+    .hero {
+        min-height: 650px;
 
-    background-position: 65% center;
-  }
+        background-position: 65% center;
+    }
 
-  .hero-overlay {
-    min-height: 650px;
+    .hero-overlay {
+        min-height: 650px;
 
-    padding: 55px 5%;
-  }
+        padding: 55px 5%;
+    }
 
-  .hero-content {
-    width: 62%;
-  }
+    .hero-content {
+        width: 62%;
+    }
 
-  .hero h1 {
-    font-size: 46px;
-  }
+    .hero h1 {
+        font-size: 46px;
+    }
 
-  .hero p {
-    font-size: 16px;
-  }
+    .hero p {
+        font-size: 16px;
+    }
 
-  .hero-features {
-    gap: 16px;
-  }
-
+    .hero-features {
+        gap: 16px;
+    }
 }
 
 
@@ -359,62 +357,61 @@
 
 @media (max-width: 700px) {
 
-  .hero {
-    min-height: 650px;
+    .hero {
+        min-height: 650px;
 
-    background-position: 65% center;
-  }
+        background-position: 65% center;
+    }
 
-  .hero-overlay {
-    min-height: 650px;
+    .hero-overlay {
+        min-height: 650px;
 
-    padding: 55px 25px;
+        padding: 55px 25px;
 
-    display: flex;
+        display: flex;
 
-    align-items: center;
-    justify-content: center;
+        align-items: center;
+        justify-content: center;
 
-    text-align: center;
+        text-align: center;
 
-    background:
-      linear-gradient(
-        to bottom,
-        rgba(248, 251, 255, 0.10),
-        rgba(248, 251, 255, 0.80),
-        #f2f9ff
-      );
-  }
+        background:
+            linear-gradient(
+                to bottom,
+                rgba(248, 251, 255, 0.10),
+                rgba(248, 251, 255, 0.80),
+                #f2f9ff
+            );
+    }
 
-  .hero-content {
-    width: 100%;
+    .hero-content {
+        width: 100%;
 
-    max-width: 650px;
-  }
+        max-width: 650px;
+    }
 
-  .company-name {
-    justify-content: center;
-  }
+    .company-name {
+        justify-content: center;
+    }
 
-  .hero h1 {
-    font-size: 42px;
-  }
+    .hero h1 {
+        font-size: 42px;
+    }
 
-  .hero p {
-    margin-left: auto;
-    margin-right: auto;
-  }
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-  .hero-buttons {
-    justify-content: center;
+    .hero-buttons {
+        justify-content: center;
 
-    flex-wrap: wrap;
-  }
+        flex-wrap: wrap;
+    }
 
-  .hero-features {
-    justify-content: center;
-  }
-
+    .hero-features {
+        justify-content: center;
+    }
 }
 
 
@@ -424,59 +421,58 @@
 
 @media (max-width: 500px) {
 
-  .hero {
-    min-height: 620px;
-  }
+    .hero {
+        min-height: 620px;
+    }
 
-  .hero-overlay {
-    min-height: 620px;
+    .hero-overlay {
+        min-height: 620px;
 
-    padding: 45px 18px;
-  }
+        padding: 45px 18px;
+    }
 
-  .company-name {
-    font-size: 12px;
+    .company-name {
+        font-size: 12px;
 
-    letter-spacing: 3px;
-  }
+        letter-spacing: 3px;
+    }
 
-  .hero h1 {
-    font-size: 36px;
+    .hero h1 {
+        font-size: 36px;
 
-    line-height: 1.08;
-  }
+        line-height: 1.08;
+    }
 
-  .hero p {
-    font-size: 15px;
+    .hero p {
+        font-size: 15px;
 
-    line-height: 1.6;
-  }
+        line-height: 1.6;
+    }
 
-  .hero-buttons {
-    flex-direction: column;
+    .hero-buttons {
+        flex-direction: column;
 
-    width: 100%;
-  }
+        width: 100%;
+    }
 
-  .hero-btn {
-    width: 100%;
+    .hero-btn {
+        width: 100%;
 
-    max-width: 280px;
-  }
+        max-width: 280px;
+    }
 
-  .hero-features {
-    gap: 18px;
-  }
+    .hero-features {
+        gap: 18px;
+    }
 
-  .hero-feature {
-    font-size: 11px;
-  }
+    .hero-feature {
+        font-size: 11px;
+    }
 
-  .feature-icon {
-    width: 36px;
-    height: 36px;
+    .feature-icon {
+        width: 36px;
+        height: 36px;
 
-    font-size: 16px;
-  }
-
+        font-size: 16px;
+    }
 }

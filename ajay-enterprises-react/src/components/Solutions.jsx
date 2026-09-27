@@ -26,10 +26,7 @@ function Solutions() {
     {
       name: "Ventilators",
       image: ventilatorImage,
-      subcategories: [
-        "Transport Ventilators",
-        "ICU Ventilators"
-      ]
+      subcategories: [ ]
     },
 
     {
