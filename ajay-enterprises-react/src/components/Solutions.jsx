@@ -14,9 +14,9 @@ import shaverImage from "../assets/shaversystem.jpg";
 function Solutions() {
 
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedBrand, setSelectedBrand] = useState(null);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [selectedImage, setSelectedImage] = useState(null);
-
 
   // =========================
   // MAIN CATEGORIES
@@ -1193,100 +1193,182 @@ function Solutions() {
   // =========================================================
   // CATEGORY PRODUCTS PAGE
   // =========================================================
+if (selectedCategory) {
 
-  if (selectedCategory) {
+  const selectedProducts =
+    products[selectedCategory] || [];
 
-    const selectedProducts =
-      products[selectedCategory] || [];
+  const brands = [
+    ...new Set(
+      selectedProducts.map((product) => product.brand)
+    )
+  ];
 
-    return (
+  const brandProducts = selectedProducts.filter(
+    (product) => product.brand === selectedBrand
+  );
 
-      <section className="solutions" id="solutions">
+  return (
+    <section
+      className="solutions"
+      id="solutions"
+    >
 
+      {!selectedBrand ? (
 
-        <div className="solutions-heading">
+        <>
+          {/* BRAND PAGE */}
 
-          <button
-            onClick={() => setSelectedCategory(null)}
-            className="back-button"
-          >
-            ← Back to Categories
-          </button>
+          <div className="solutions-heading">
 
-
-          <h2>
-            {selectedCategory}
-          </h2>
-
-
-          <p>
-            Explore our range of {selectedCategory}
-          </p>
-
-        </div>
-
-
-        <div className="categories-grid">
-
-          {selectedProducts.map((product, index) => (
-
-            <div
-              className="category-card"
-              key={index}
+            <button
+              onClick={() => setSelectedCategory(null)}
+              className="back-button"
             >
+              ← Back to Categories
+            </button>
 
+            <h2>{selectedCategory}</h2>
 
-              <div className="category-image">
+            <p>
+              Explore Brands
+            </p>
 
-                <img
-                  src={product.image}
-                  alt={product.name}
-                />
+          </div>
 
-              </div>
+          <div className="categories-grid">
 
+            {brands.map((brand, index) => {
 
-              <div className="category-content">
+              const brandProduct =
+                selectedProducts.find(
+                  (product) => product.brand === brand
+                );
 
-                <p className="product-brand">
-                  {product.brand}
-                </p>
-
-
-                <h3>
-                  {product.name}
-                </h3>
-
-
-                <p className="product-price">
-                  {product.price}
-                </p>
-
-
-                <button
-                  className="view-products"
-                  onClick={() => {
-                    setSelectedProduct(product);
-                    setSelectedImage(null);
-                  }}
+              return (
+                <div
+                  className="category-card"
+                  key={index}
                 >
-                  View Details →
-                </button>
+
+                  <div className="category-image">
+
+                    <img
+                      src={brandProduct?.image}
+                      alt={brand}
+                    />
+
+                  </div>
+
+                  <div className="category-content">
+
+                    <p className="product-brand">
+                      BRAND
+                    </p>
+
+                    <h3>{brand}</h3>
+
+                    <p>
+                      Explore {brand} products
+                    </p>
+
+                    <button
+                      className="view-products"
+                      onClick={() =>
+                        setSelectedBrand(brand)
+                      }
+                    >
+                      View Products →
+                    </button>
+
+                  </div>
+
+                </div>
+              );
+
+            })}
+
+          </div>
+        </>
+
+      ) : (
+
+        <>
+          {/* PRODUCTS OF SELECTED BRAND */}
+
+          <div className="solutions-heading">
+
+            <button
+              onClick={() => setSelectedBrand(null)}
+              className="back-button"
+            >
+              ← Back to Brands
+            </button>
+
+            <h2>{selectedBrand}</h2>
+
+            <p>
+              {selectedCategory} by {selectedBrand}
+            </p>
+
+          </div>
+
+          <div className="categories-grid">
+
+            {brandProducts.map((product, index) => (
+
+              <div
+                className="category-card"
+                key={index}
+              >
+
+                <div className="category-image">
+
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                  />
+
+                </div>
+
+                <div className="category-content">
+
+                  <p className="product-brand">
+                    {product.brand}
+                  </p>
+
+                  <h3>
+                    {product.name}
+                  </h3>
+
+                  <p className="product-price">
+                    {product.price}
+                  </p>
+
+                  <button
+                    className="view-products"
+                    onClick={() => {
+                      setSelectedProduct(product);
+                      setSelectedImage(null);
+                    }}
+                  >
+                    View Details →
+                  </button>
+
+                </div>
 
               </div>
 
-            </div>
+            ))}
 
-          ))}
+          </div>
+        </>
 
-        </div>
+      )}
 
-      </section>
-
-    );
-
-  }
-
+    </section>
+  );
+}
 
   // =========================================================
   // MAIN CATEGORY PAGE

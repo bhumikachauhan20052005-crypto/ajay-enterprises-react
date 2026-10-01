@@ -7,14 +7,23 @@ import GE from "../assets/06_GE.png";
 import Maquet from "../assets/07_Maquet.png";
 import DetexOmeda from "../assets/08_Detex_Omeda.png";
 import Erbe from "../assets/09_Erbe.png";
-import KarlMartin from "../assets/10_Karl_Martin.png";
+
 import Mindray from "../assets/11_Mindray.png";
 import Philips from "../assets/12_Philips.png";
 import Edan from "../assets/13_Edan.png";
 import BPL from "../assets/14_BPL.png";
 import Yonker from "../assets/15_Yonker.png";
 import Medtronic from "../assets/16_Medtronic.png";
+import Siemens from "../assets/17_siemens.png";
+import Smith from "../assets/18_smith.png";
+import Fresenius from "../assets/19_fresenius.png";
+import Fisher from "../assets/20_fisher.png";
+import Schiller from "../assets/21_schiller.png";
+import Johnson from "../assets/22_johnson.png";
+import Zoll from "../assets/23_zoll.png";
+import Braun from "../assets/24_braun.png";
 
+import Nidek from "../assets/26_nidek.png";
 
 function Manufacturers() {
 
@@ -55,10 +64,7 @@ function Manufacturers() {
             name: "ERBE",
             image: Erbe
         },
-        {
-            name: "KARL MARTIN",
-            image: KarlMartin
-        },
+        
         {
             name: "MINDRAY",
             image: Mindray
@@ -82,7 +88,44 @@ function Manufacturers() {
         {
             name: "MEDTRONIC",
             image: Medtronic
-        }
+        },
+        {
+    name: "SIEMENS",
+    image: Siemens
+},
+{
+    name: "SMITH & NEPHEW",
+    image: Smith
+},
+{
+    name: "FRESENIUS",
+    image: Fresenius
+},
+{
+    name: "FISHER",
+    image: Fisher
+},
+{
+    name: "SCHILLER",
+    image: Schiller
+},
+{
+    name: "JOHNSON & JOHNSON",
+    image: Johnson
+},
+{
+    name: "ZOLL",
+    image: Zoll
+},
+{
+    name: "BRAUN",
+    image: Braun
+},
+
+{
+    name: "NIDEK",
+    image: Nidek
+},
     ];
 
 

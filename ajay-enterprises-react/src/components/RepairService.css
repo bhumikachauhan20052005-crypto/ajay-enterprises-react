@@ -1,0 +1,272 @@
+.repair-section {
+  background: #f5f8fc;
+  padding: 90px 0;
+}
+
+.repair-container {
+  width: 86%;
+  max-width: 1350px;
+  margin: auto;
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.repair-heading {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 55px;
+}
+
+.repair-label {
+  display: inline-block;
+  color: #d9a928;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.repair-heading h2 {
+  color: #09213f;
+  font-size: 38px;
+  margin: 0 0 14px;
+  font-weight: 800;
+}
+
+.repair-heading h2 span {
+  color: #d9a928;
+}
+
+.repair-heading p {
+  color: #64748b;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* =========================
+   SERVICE GRID
+========================= */
+
+.repair-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.repair-card {
+  background: #ffffff;
+  border: 1px solid #e3eaf2;
+  border-radius: 14px;
+  padding: 35px 28px;
+  text-align: center;
+  min-height: 310px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  transition: all 0.3s ease;
+}
+
+.repair-card:hover {
+  transform: translateY(-8px);
+  border-color: #d9a928;
+  box-shadow: 0 15px 35px rgba(9, 33, 63, 0.12);
+}
+
+/* =========================
+   ICON
+========================= */
+
+.repair-icon {
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eef5fb;
+  border-radius: 50%;
+
+  font-size: 31px;
+  margin-bottom: 22px;
+
+  transition: all 0.3s ease;
+}
+
+.repair-card:hover .repair-icon {
+  background: #09213f;
+  transform: scale(1.08);
+}
+
+/* =========================
+   CARD TEXT
+========================= */
+
+.repair-card h3 {
+  color: #09213f;
+  font-size: 21px;
+  margin: 0 0 13px;
+  font-weight: 750;
+}
+
+.repair-card p {
+  color: #64748b;
+  font-size: 14.5px;
+  line-height: 1.7;
+  margin: 0 0 22px;
+  max-width: 310px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.repair-btn {
+  margin-top: auto;
+
+  border: none;
+  background: transparent;
+
+  color: #09213f;
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.repair-btn span {
+  color: #d9a928;
+  font-size: 18px;
+  margin-left: 5px;
+}
+
+.repair-btn:hover {
+  color: #d9a928;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.repair-cta {
+  margin-top: 60px;
+
+  background: #09213f;
+  border-radius: 16px;
+
+  padding: 38px 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.cta-small {
+  color: #d9a928;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.repair-cta h3 {
+  color: #ffffff;
+  font-size: 27px;
+  line-height: 1.3;
+  margin: 8px 0 10px;
+}
+
+.repair-cta p {
+  color: #cbd5e1;
+  margin: 0;
+  font-size: 14px;
+}
+
+/* =========================
+   CTA BUTTON
+========================= */
+
+.service-request-btn {
+  background: #d9a928;
+  color: #09213f;
+
+  border: none;
+  border-radius: 7px;
+
+  padding: 15px 25px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+  white-space: nowrap;
+
+  transition: all 0.25s ease;
+}
+
+.service-request-btn span {
+  margin-left: 7px;
+  font-size: 18px;
+}
+
+.service-request-btn:hover {
+  background: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+  .repair-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .repair-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 650px) {
+  .repair-section {
+    padding: 60px 0;
+  }
+
+  .repair-container {
+    width: 90%;
+  }
+
+  .repair-heading h2 {
+    font-size: 30px;
+  }
+
+  .repair-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .repair-card {
+    min-height: auto;
+  }
+
+  .repair-cta {
+    padding: 30px 25px;
+  }
+
+  .repair-cta h3 {
+    font-size: 23px;
+  }
+}
