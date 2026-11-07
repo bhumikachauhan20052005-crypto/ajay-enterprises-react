@@ -1,4 +1,11 @@
-function Navbar() {
+import "../Navbar.css";
+
+function Navbar({ searchQuery, onSearch }) {
+
+    function handleSearch(value) {
+        onSearch?.(value);
+    }
+
     return (
         <nav className="navbar">
 
@@ -10,22 +17,11 @@ function Navbar() {
             </div>
 
             <div className="nav-links">
-
                 <a href="#home">Home</a>
-
                 <a href="#about">About Us</a>
-
-                <a href="#solutions">
-                    Categories
-                </a>
-
-                <a href="#manufacturers">
-                    Manufacturers
-                </a>
-
-                <a href="#services">
-                    Repair & Service
-                </a>
+                <a href="#solutions">Categories</a>
+                <a href="#manufacturers">Manufacturers</a>
+                <a href="#services">Repair & Service</a>
 
                 <a
                     href="#deals"
@@ -34,24 +30,50 @@ function Navbar() {
                     Deals
                 </a>
 
-                <a href="#contact">
-                    Contact
-                </a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div className="navbar-search">
+
+                <span className="search-icon">
+                    ⌕
+                </span>
+
+                <input
+                    type="search"
+                    value={searchQuery}
+                    onChange={(e) =>
+                        handleSearch(e.target.value)
+                    }
+                    placeholder="Search equipment..."
+                    aria-label="Search medical equipment"
+                />
+
+                {searchQuery && (
+                    <button
+                        type="button"
+                        className="clear-search"
+                        onClick={() => handleSearch("")}
+                        aria-label="Clear search"
+                    >
+                        ×
+                    </button>
+                )}
 
             </div>
 
-          <button
-            className="quote-btn"
-            onClick={() => {
-             document
-            .getElementById("contact")
-            .scrollIntoView({
-                behavior: "smooth"
-            });
-    }}
->
-    Request a Quote
-</button>
+            <button
+                className="quote-btn"
+                onClick={() => {
+                    document
+                        .getElementById("contact")
+                        ?.scrollIntoView({
+                            behavior: "smooth",
+                        });
+                }}
+            >
+                Request a Quote
+            </button>
 
         </nav>
     );

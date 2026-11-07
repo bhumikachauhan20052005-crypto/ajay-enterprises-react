@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Solutions from "./components/Solutions";
@@ -8,24 +10,33 @@ import RepairService from "./components/RepairService";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Chatbot from "./components/Chatbot";
+
 import "./App.css";
 
 function App() {
+    const [searchQuery, setSearchQuery] = useState("");
+
     return (
         <>
-            <Navbar />
+            <Navbar
+                searchQuery={searchQuery}
+                onSearch={setSearchQuery}
+            />
+
             <Hero />
-            <Solutions />
+
+            <Solutions
+                searchQuery={searchQuery}
+                clearSearch={() => setSearchQuery("")}
+            />
+
             <Aboutus />
             <Manufacturers />
             <Deals />
-             <RepairService />
+            <RepairService />
             <Contact />
             <Footer />
-             <Chatbot />
-          
-
-        
+            <Chatbot />
         </>
     );
 }
