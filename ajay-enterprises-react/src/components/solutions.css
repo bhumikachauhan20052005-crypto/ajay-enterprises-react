@@ -1,0 +1,460 @@
+
+/* =========================================
+   AJAY ENTERPRISES - SOLUTIONS SECTION
+   COMPLETE RESPONSIVE CSS
+========================================= */
+
+
+/* =========================================
+   1. GLOBAL SECTION
+========================================= */
+
+.solutions-section {
+    width: 100%;
+    padding: 75px 6%;
+    background: #f2f9ff;
+    box-sizing: border-box;
+}
+
+.solutions-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   2. SECTION HEADER
+========================================= */
+
+.solutions-header {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 40px;
+}
+
+.section-tag {
+    color: #dcae32;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.solutions-header h2 {
+    font-size: 38px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #071b35;
+    margin-bottom: 15px;
+}
+
+.solutions-header h2 span {
+    color: #dcae32;
+}
+
+.solutions-header > p:last-child {
+    font-size: 16px;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   3. CATEGORY TABS
+========================================= */
+
+.category-tabs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.category-btn {
+    padding: 12px 22px;
+    background: #ffffff;
+    color: #071b35;
+    border: 1px solid #dbe3ec;
+    border-radius: 30px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.category-btn:hover,
+.category-btn.active {
+    background: #071b35;
+    color: #ffffff;
+    border-color: #071b35;
+}
+
+
+/* =========================================
+   4. PRODUCTS GRID
+========================================= */
+
+.products-grid {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 24px;
+}
+
+
+/* =========================================
+   5. PRODUCT CARD
+========================================= */
+
+.product-card {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 18px rgba(7, 27, 53, 0.06);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 12px 28px rgba(7, 27, 53, 0.12);
+}
+
+
+/* =========================================
+   6. PRODUCT IMAGE
+========================================= */
+
+.product-image-container {
+    width: 100%;
+    height: 220px;
+
+    padding: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+
+    box-sizing: border-box;
+}
+
+.product-image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   7. PRODUCT CONTENT
+========================================= */
+
+.product-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    padding: 20px;
+}
+
+.product-brand {
+    color: #dcae32;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    margin-bottom: 8px;
+}
+
+.product-name {
+    color: #071b35;
+
+    font-size: 19px;
+    line-height: 1.4;
+
+    margin-bottom: 10px;
+}
+
+.product-description {
+    color: #64748b;
+
+    font-size: 13px;
+    line-height: 1.6;
+
+    margin-bottom: 15px;
+}
+
+.product-price {
+    color: #071b35;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    margin-top: auto;
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   8. VIEW DETAILS BUTTON
+   NAVY BLUE BRAND COLOR
+========================================= */
+
+.view-details-btn {
+    width: 100%;
+
+    padding: 12px 15px;
+
+    background: #071b35;
+    color: #ffffff;
+
+    border: 1px solid #071b35;
+    border-radius: 7px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.view-details-btn:hover {
+    background: #102d52;
+    color: #ffffff;
+
+    border-color: #102d52;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   9. LAPTOP RESPONSIVENESS
+========================================= */
+
+@media (min-width: 1401px) {
+
+    .products-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 24px;
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1400px) {
+
+    .solutions-section {
+        padding: 65px 5%;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .product-image-container {
+        height: 210px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+
+    .solutions-section {
+        padding: 65px 5%;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .product-image-container {
+        height: 200px;
+    }
+
+    .solutions-header h2 {
+        font-size: 34px;
+    }
+}
+
+
+/* =========================================
+   10. IPAD MINI & TABLETS
+========================================= */
+
+@media (min-width: 601px) and (max-width: 1023px) {
+
+    .solutions-section {
+        padding: 55px 4%;
+    }
+
+    .solutions-header h2 {
+        font-size: 32px;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .product-image-container {
+        height: 200px;
+    }
+
+    .product-content {
+        padding: 17px;
+    }
+
+    .product-name {
+        font-size: 17px;
+    }
+
+    .category-tabs {
+        gap: 10px;
+    }
+
+    .category-btn {
+        padding: 10px 16px;
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================
+   11. MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 600px) {
+
+    .solutions-section {
+        padding: 50px 16px;
+    }
+
+    .solutions-header {
+        margin-bottom: 28px;
+    }
+
+    .solutions-header h2 {
+        font-size: 27px;
+    }
+
+    .solutions-header > p:last-child {
+        font-size: 14px;
+    }
+
+    .category-tabs {
+        gap: 9px;
+        margin-bottom: 28px;
+    }
+
+    .category-btn {
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .product-image-container {
+        height: 230px;
+    }
+
+    .product-content {
+        padding: 18px;
+    }
+
+    .product-name {
+        font-size: 18px;
+    }
+
+    .product-description {
+        font-size: 13px;
+    }
+
+    .view-details-btn {
+        padding: 13px;
+        font-size: 14px;
+    }
+}
+
+
+/* =========================================
+   12. EXTRA SMALL PHONES
+========================================= */
+
+@media (max-width: 360px) {
+
+    .solutions-section {
+        padding: 40px 12px;
+    }
+
+    .solutions-header h2 {
+        font-size: 24px;
+    }
+
+    .product-image-container {
+        height: 190px;
+    }
+
+    .category-btn {
+        padding: 9px 12px;
+        font-size: 11px;
+    }
+
+    .product-content {
+        padding: 15px;
+    }
+}
+
+
+/* =========================================
+   13. ACCESSIBILITY
+========================================= */
+
+.category-btn:focus-visible,
+.view-details-btn:focus-visible {
+    outline: 3px solid #dcae32;
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .product-card,
+    .view-details-btn,
+    .category-btn {
+        transition: none;
+    }
+
+    .product-card:hover,
+    .view-details-btn:hover {
+        transform: none;
+    }
+}

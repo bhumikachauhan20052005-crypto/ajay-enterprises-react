@@ -1,3 +1,4 @@
+
 import React from "react";
 import "./RepairService.css";
 
@@ -41,12 +42,28 @@ const services = [
 ];
 
 function RepairService() {
-  return (
-    <section className="repair-section" id="repair-service">
 
+  // Replace with your actual WhatsApp business number
+const phoneNumber = "919717071038";
+
+  const openWhatsApp = (serviceName = "General Service Enquiry") => {
+    const message = `Hello Ajay Enterprises,
+
+I want to enquire about your Repair & Service.
+
+Service Required: ${serviceName}
+
+Please share more details.`;
+
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappURL, "_blank", "noopener,noreferrer");
+  };
+
+  return (
+    <section className="repair-section" id="services">
       <div className="repair-container">
 
-        {/* Heading */}
         <div className="repair-heading">
           <span className="repair-label">REPAIR & SERVICE</span>
 
@@ -60,30 +77,26 @@ function RepairService() {
           </p>
         </div>
 
-        {/* Service Cards */}
         <div className="repair-grid">
           {services.map((service, index) => (
             <div className="repair-card" key={index}>
-
-              <div className="repair-icon">
-                {service.icon}
-              </div>
+              <div className="repair-icon">{service.icon}</div>
 
               <h3>{service.title}</h3>
 
               <p>{service.description}</p>
 
-              <button className="repair-btn">
+              <button
+                className="repair-btn"
+                onClick={() => openWhatsApp(service.title)}
+              >
                 Know More <span>→</span>
               </button>
-
             </div>
           ))}
         </div>
 
-        {/* CTA */}
         <div className="repair-cta">
-
           <div>
             <span className="cta-small">NEED TECHNICAL ASSISTANCE?</span>
 
@@ -98,14 +111,15 @@ function RepairService() {
             </p>
           </div>
 
-          <button className="service-request-btn">
+          <button
+            className="service-request-btn"
+            onClick={() => openWhatsApp()}
+          >
             Request Service <span>→</span>
           </button>
-
         </div>
 
       </div>
-
     </section>
   );
 }

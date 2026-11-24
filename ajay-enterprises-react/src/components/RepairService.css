@@ -270,3 +270,9 @@
     font-size: 23px;
   }
 }
+
+
+#services {
+    scroll-margin-top: 100px;
+    scroll-behavior: smooth;
+}

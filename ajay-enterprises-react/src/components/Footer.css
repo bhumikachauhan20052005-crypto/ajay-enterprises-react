@@ -1,0 +1,241 @@
+
+/* =========================================
+   AJAY ENTERPRISES - PREMIUM FOOTER
+========================================= */
+
+.footer {
+    width: 100%;
+    background: #071b35;
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+/* =========================================
+   FOOTER MAIN
+========================================= */
+
+.footer-main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 75px 6% 60px;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 65px;
+}
+
+/* =========================================
+   ABOUT SECTION
+========================================= */
+
+.footer-about {
+    max-width: 380px;
+}
+
+.footer-about img {
+    width: 190px;
+    height: auto;
+    object-fit: contain;
+    background: #ffffff;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 22px;
+}
+
+.footer-about p {
+    color: #bdc9d8;
+    font-size: 14px;
+    line-height: 1.9;
+    margin: 0;
+}
+
+/* =========================================
+   FOOTER HEADINGS
+========================================= */
+
+.footer-links h3,
+.footer-contact h3 {
+    color: #dcae32;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.footer-links h3::after,
+.footer-contact h3::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #dcae32;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* =========================================
+   QUICK LINKS
+========================================= */
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-links a {
+    color: #bdc9d8;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 13px;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #dcae32;
+    transform: translateX(5px);
+}
+
+/* =========================================
+   CONTACT DETAILS
+========================================= */
+
+.footer-contact p {
+    color: #bdc9d8;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 17px;
+    overflow-wrap: anywhere;
+    transition: color 0.3s ease;
+}
+
+.footer-contact p:hover {
+    color: #dcae32;
+}
+
+/* =========================================
+   FOOTER BOTTOM
+========================================= */
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 22px 6%;
+    text-align: center;
+    background: #051529;
+}
+
+.footer-bottom p {
+    color: #94a3b8;
+    font-size: 13px;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* =========================================
+   LARGE DESKTOP
+========================================= */
+
+@media (min-width: 1400px) {
+    .footer-main {
+        padding: 85px 8% 65px;
+        gap: 85px;
+    }
+}
+
+/* =========================================
+   IPAD PRO / SMALL LAPTOP
+========================================= */
+
+@media (min-width: 1025px) and (max-width: 1399px) {
+    .footer-main {
+        padding: 65px 5%;
+        gap: 40px;
+    }
+
+    .footer-about img {
+        width: 170px;
+    }
+}
+
+/* =========================================
+   IPAD MINI / TABLETS
+========================================= */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        padding: 60px 5%;
+    }
+
+    .footer-about {
+        grid-column: 1 / -1;
+        max-width: 550px;
+    }
+
+    .footer-about img {
+        width: 180px;
+    }
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 600px) {
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 50px 22px 40px;
+    }
+
+    .footer-about {
+        max-width: 100%;
+    }
+
+    .footer-about img {
+        width: 165px;
+    }
+
+    .footer-about p {
+        font-size: 13px;
+    }
+
+    .footer-links h3,
+    .footer-contact h3 {
+        font-size: 17px;
+        margin-bottom: 20px;
+    }
+
+    .footer-links a {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+
+    .footer-contact p {
+        font-size: 13px;
+    }
+
+    .footer-bottom {
+        padding: 20px 15px;
+    }
+
+    .footer-bottom p {
+        font-size: 12px;
+    }
+}
+
+/* =========================================
+   EXTRA SMALL PHONES
+========================================= */
+
+@media (max-width: 360px) {
+    .footer-main {
+        padding: 40px 16px 30px;
+        gap: 30px;
+    }
+
+    .footer-about img {
+        width: 145px;
+    }
+}

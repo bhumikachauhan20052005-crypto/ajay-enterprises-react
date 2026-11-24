@@ -1,12 +1,14 @@
+import "./ProductDetails.css";
+
 import { useState } from "react";
 
 
 function ProductDetails({ product, onBack }) {
     const [selectedImage, setSelectedImage] = useState(
-        product.images?.[0] || product.image
-    );
+    product?.images?.[0] || product?.image
+);
 
-    if (!product) return null;
+if (!product) return null;
 
     const images = product.images || [product.image];
 
@@ -58,9 +60,11 @@ function ProductDetails({ product, onBack }) {
 
                     <h1>{product.name}</h1>
 
-                    <p className="product-category">
-                        {product.category}
-                    </p>
+                    {product.category && (
+    <p className="product-category">
+        {product.category}
+    </p>
+)}
 
                     <h3>Price on Request</h3>
 

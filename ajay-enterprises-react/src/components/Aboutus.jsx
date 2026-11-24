@@ -1,3 +1,5 @@
+import "./Aboutus.css";
+
 function About() {
     return (
         <section id="about" className="about">

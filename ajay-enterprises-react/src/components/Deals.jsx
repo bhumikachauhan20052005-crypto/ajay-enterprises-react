@@ -1,3 +1,6 @@
+
+
+import "./Deals.css";
 import { useEffect, useRef } from "react";
 
 function Deals() {
@@ -115,12 +118,12 @@ function Deals() {
     onClick={() => {
         document
             .getElementById("contact")
-            .scrollIntoView({
+            ?.scrollIntoView({
                 behavior: "smooth"
             });
     }}
 >
-    Request Quote
+    Request Quote →
 </button>
 
                         </div>

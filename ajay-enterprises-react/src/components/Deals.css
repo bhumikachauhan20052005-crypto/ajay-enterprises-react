@@ -1,0 +1,354 @@
+
+/* =========================================
+   AJAY ENTERPRISES - DEALS SECTION
+   PREMIUM RESPONSIVE DESIGN
+========================================= */
+
+/* MAIN SECTION */
+
+.deals {
+    width: 100%;
+    padding: 85px 6%;
+    background: #f2f9ff;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.deals .section-heading {
+    max-width: 750px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.deals .section-tag {
+    color: #dcae32;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.deals .section-heading h2 {
+    color: #071b35;
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.deals .section-heading > p:last-child {
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* =========================================
+   TOP SELLERS SLIDER
+========================================= */
+
+.top-sellers-grid {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    display: flex;
+    gap: 24px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+
+    padding: 10px 5px 25px;
+
+    scrollbar-width: none;
+}
+
+.top-sellers-grid::-webkit-scrollbar {
+    display: none;
+}
+
+/* =========================================
+   SELLER CARD
+========================================= */
+
+.deals .seller-card {
+    flex: 0 0 280px;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(7, 27, 53, 0.06);
+
+    scroll-snap-align: start;
+
+    transition: all 0.3s ease;
+}
+
+.deals .seller-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 14px 30px rgba(7, 27, 53, 0.12);
+
+    border-color: #dcae32;
+}
+
+/* =========================================
+   PRODUCT IMAGE PLACEHOLDER
+========================================= */
+
+.deals .seller-card .product-image {
+    width: 100%;
+    height: 210px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eaf2fa;
+
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.deals .seller-card .product-image span {
+    color: #071b35;
+    font-size: 15px;
+    font-weight: 700;
+
+    text-align: center;
+
+    background: #ffffff;
+    padding: 12px 20px;
+
+    border-radius: 8px;
+}
+
+/* =========================================
+   PRODUCT INFORMATION
+========================================= */
+
+.deals .seller-card .product-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    padding: 22px;
+}
+
+/* CATEGORY */
+
+.deals .seller-card .product-category {
+    color: #dcae32;
+    font-size: 12px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+
+    margin-bottom: 10px;
+}
+
+/* PRODUCT NAME */
+
+.deals .seller-card .product-info h3 {
+    color: #071b35;
+    font-size: 21px;
+    font-weight: 800;
+
+    line-height: 1.4;
+
+    margin-bottom: 18px;
+}
+
+/* PRICE */
+
+.deals .seller-card .product-price {
+    color: #071b35;
+    font-size: 16px;
+    font-weight: 700;
+
+    margin-top: auto;
+    margin-bottom: 18px;
+}
+
+/* =========================================
+   REQUEST QUOTE BUTTON
+========================================= */
+
+.deals .seller-card .product-info button {
+    width: 100%;
+    padding: 13px 16px;
+
+    background: #071b35;
+    color: #ffffff;
+
+    border: 1px solid #071b35;
+    border-radius: 7px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.deals .seller-card .product-info button:hover {
+    background: #dcae32;
+    color: #071b35;
+
+    border-color: #dcae32;
+
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   LARGE DESKTOP
+========================================= */
+
+@media (min-width: 1401px) {
+
+    .deals {
+        padding: 90px 7%;
+    }
+
+    .deals .seller-card {
+        flex-basis: 300px;
+    }
+}
+
+/* =========================================
+   LAPTOP / IPAD PRO
+========================================= */
+
+@media (min-width: 1025px) and (max-width: 1400px) {
+
+    .deals {
+        padding: 75px 5%;
+    }
+
+    .deals .section-heading h2 {
+        font-size: 34px;
+    }
+
+    .deals .seller-card {
+        flex-basis: 270px;
+    }
+
+    .deals .seller-card .product-image {
+        height: 195px;
+    }
+}
+
+/* =========================================
+   IPAD MINI / TABLETS
+========================================= */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    .deals {
+        padding: 60px 4%;
+    }
+
+    .deals .section-heading h2 {
+        font-size: 32px;
+    }
+
+    .deals .seller-card {
+        flex-basis: 260px;
+    }
+
+    .deals .seller-card .product-image {
+        height: 185px;
+    }
+
+    .deals .seller-card .product-info {
+        padding: 19px;
+    }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .deals {
+        padding: 50px 16px;
+    }
+
+    .deals .section-heading {
+        margin-bottom: 28px;
+    }
+
+    .deals .section-tag {
+        font-size: 11px;
+    }
+
+    .deals .section-heading h2 {
+        font-size: 27px;
+    }
+
+    .deals .section-heading > p:last-child {
+        font-size: 14px;
+    }
+
+    .top-sellers-grid {
+        gap: 16px;
+        padding: 8px 3px 20px;
+    }
+
+    .deals .seller-card {
+        flex-basis: 260px;
+        border-radius: 12px;
+    }
+
+    .deals .seller-card .product-image {
+        height: 180px;
+    }
+
+    .deals .seller-card .product-info {
+        padding: 18px;
+    }
+
+    .deals .seller-card .product-info h3 {
+        font-size: 19px;
+    }
+}
+
+/* =========================================
+   EXTRA SMALL PHONES
+========================================= */
+
+@media (max-width: 360px) {
+
+    .deals {
+        padding: 40px 12px;
+    }
+
+    .deals .section-heading h2 {
+        font-size: 24px;
+    }
+
+    .deals .seller-card {
+        flex-basis: 240px;
+    }
+
+    .deals .seller-card .product-image {
+        height: 160px;
+    }
+}

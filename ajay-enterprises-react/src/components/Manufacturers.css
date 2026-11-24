@@ -1,0 +1,256 @@
+
+/* =========================================
+   AJAY ENTERPRISES
+   MANUFACTURERS SECTION
+   FULL RESPONSIVE DESIGN
+========================================= */
+
+/* MAIN SECTION */
+
+.manufacturers {
+    width: 100%;
+    padding: 85px 6%;
+    background: #f2f9ff;
+    box-sizing: border-box;
+}
+
+/* SECTION HEADING */
+
+.manufacturers .section-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 50px;
+}
+
+.manufacturers .section-tag {
+    color: #dcae32;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.manufacturers .section-heading h2 {
+    color: #071b35;
+    font-size: 38px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.manufacturers .section-heading > p:last-child {
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* =========================================
+   BRANDS GRID
+========================================= */
+
+.brands-grid {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+/* =========================================
+   BRAND CARD
+========================================= */
+
+.brand-card {
+    min-width: 0;
+    height: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+
+    box-shadow: 0 5px 18px rgba(7, 27, 53, 0.05);
+
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+/* HOVER EFFECT */
+
+.brand-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #dcae32;
+
+    box-shadow: 0 12px 25px rgba(7, 27, 53, 0.10);
+}
+
+/* BRAND LOGOS */
+
+.brand-logo {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    max-width: 190px;
+    max-height: 95px;
+
+    object-fit: contain;
+
+    transition: transform 0.3s ease;
+}
+
+.brand-card:hover .brand-logo {
+    transform: scale(1.05);
+}
+
+/* =========================================
+   LARGE DESKTOP
+========================================= */
+
+@media (min-width: 1401px) {
+
+    .brands-grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 25px;
+    }
+
+    .brand-card {
+        height: 165px;
+    }
+}
+
+/* =========================================
+   LAPTOP / IPAD PRO
+========================================= */
+
+@media (min-width: 1025px) and (max-width: 1400px) {
+
+    .manufacturers {
+        padding: 75px 5%;
+    }
+
+    .brands-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .brand-card {
+        height: 145px;
+    }
+
+    .manufacturers .section-heading h2 {
+        font-size: 34px;
+    }
+}
+
+/* =========================================
+   IPAD MINI / TABLETS
+========================================= */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    .manufacturers {
+        padding: 60px 4%;
+    }
+
+    .manufacturers .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .manufacturers .section-heading h2 {
+        font-size: 32px;
+    }
+
+    .brands-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .brand-card {
+        height: 130px;
+        padding: 20px;
+    }
+
+    .brand-logo {
+        max-height: 85px;
+    }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .manufacturers {
+        padding: 50px 16px;
+    }
+
+    .manufacturers .section-heading {
+        margin-bottom: 30px;
+    }
+
+    .manufacturers .section-tag {
+        font-size: 11px;
+    }
+
+    .manufacturers .section-heading h2 {
+        font-size: 27px;
+    }
+
+    .manufacturers .section-heading > p:last-child {
+        font-size: 14px;
+    }
+
+    .brands-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 13px;
+    }
+
+    .brand-card {
+        height: 110px;
+        padding: 15px;
+        border-radius: 11px;
+    }
+
+    .brand-logo {
+        max-height: 75px;
+    }
+}
+
+/* =========================================
+   EXTRA SMALL PHONES
+========================================= */
+
+@media (max-width: 360px) {
+
+    .manufacturers {
+        padding: 40px 12px;
+    }
+
+    .manufacturers .section-heading h2 {
+        font-size: 24px;
+    }
+
+    .brands-grid {
+        gap: 10px;
+    }
+
+    .brand-card {
+        height: 95px;
+        padding: 12px;
+    }
+
+    .brand-logo {
+        max-height: 65px;
+    }
+}

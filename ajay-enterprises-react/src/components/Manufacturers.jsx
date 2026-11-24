@@ -25,6 +25,8 @@ import Braun from "../assets/allbrands/24_braun.png";
 
 import Nidek from "../assets/allbrands/26_nidek.png";
 
+import "./Manufacturers.css";
+
 function Manufacturers() {
 
     const brands = [

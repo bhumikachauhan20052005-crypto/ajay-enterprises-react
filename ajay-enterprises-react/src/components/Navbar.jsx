@@ -1,13 +1,29 @@
+
+import { useState } from "react";
 import "../Navbar.css";
 
 function Navbar({ searchQuery, onSearch }) {
+
+    const [menuOpen, setMenuOpen] = useState(false);
 
     function handleSearch(value) {
         onSearch?.(value);
     }
 
+    function closeMenu() {
+        setMenuOpen(false);
+    }
+
+    function scrollToContact() {
+        document
+            .getElementById("contact")
+            ?.scrollIntoView({ behavior: "smooth" });
+
+        closeMenu();
+    }
+
     return (
-        <nav className="navbar">
+        <nav className={`navbar ${menuOpen ? "menu-open" : ""}`}>
 
             <div className="navbar-logo">
                 <img
@@ -16,35 +32,48 @@ function Navbar({ searchQuery, onSearch }) {
                 />
             </div>
 
-            <div className="nav-links">
-                <a href="#home">Home</a>
-                <a href="#about">About Us</a>
-                <a href="#solutions">Categories</a>
-                <a href="#manufacturers">Manufacturers</a>
-                <a href="#services">Repair & Service</a>
+            {/* MOBILE MENU BUTTON */}
+
+            <button
+                className="menu-toggle"
+                onClick={() => setMenuOpen(!menuOpen)}
+                aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+                aria-expanded={menuOpen}
+                aria-controls="main-navigation"
+            >
+                {menuOpen ? "✕" : "☰"}
+            </button>
+
+            {/* NAVIGATION LINKS */}
+
+            <div className="nav-links" id="main-navigation">
+                <a href="#home" onClick={closeMenu}>Home</a>
+                <a href="#about" onClick={closeMenu}>About Us</a>
+                <a href="#solutions" onClick={closeMenu}>Products</a>
+                <a href="#manufacturers" onClick={closeMenu}>Manufacturers</a>
+                <a href="#services" onClick={closeMenu}>Repair & Service</a>
 
                 <a
                     href="#deals"
                     className="deals-link"
+                    onClick={closeMenu}
                 >
                     Deals
                 </a>
 
-                <a href="#contact">Contact</a>
+                <a href="#contact" onClick={closeMenu}>Contact</a>
             </div>
+
+            {/* SEARCH */}
 
             <div className="navbar-search">
 
-                <span className="search-icon">
-                    ⌕
-                </span>
+                <span className="search-icon">⌕</span>
 
                 <input
                     type="search"
                     value={searchQuery}
-                    onChange={(e) =>
-                        handleSearch(e.target.value)
-                    }
+                    onChange={(e) => handleSearch(e.target.value)}
                     placeholder="Search equipment..."
                     aria-label="Search medical equipment"
                 />
@@ -62,15 +91,11 @@ function Navbar({ searchQuery, onSearch }) {
 
             </div>
 
+            {/* QUOTE BUTTON */}
+
             <button
                 className="quote-btn"
-                onClick={() => {
-                    document
-                        .getElementById("contact")
-                        ?.scrollIntoView({
-                            behavior: "smooth",
-                        });
-                }}
+                onClick={scrollToContact}
             >
                 Request a Quote
             </button>

@@ -1,0 +1,383 @@
+
+/* =========================================
+   AJAY ENTERPRISES - CONTACT SECTION
+   PREMIUM RESPONSIVE DESIGN
+========================================= */
+
+.contact {
+    width: 100%;
+    padding: 90px 7%;
+    background: #f2f9ff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 65px;
+    box-sizing: border-box;
+}
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.contact-content {
+    width: 100%;
+}
+
+.contact-tag {
+    color: #dcae32;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.contact-content h2 {
+    font-size: 38px;
+    line-height: 1.25;
+    color: #071b35;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.contact-content h2 span {
+    color: #dcae32;
+}
+
+.contact-description {
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 520px;
+    margin-bottom: 35px;
+}
+
+/* =========================================
+   CONTACT DETAILS
+========================================= */
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 18px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(7, 27, 53, 0.05);
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateX(5px);
+    border-color: #dcae32;
+    box-shadow: 0 8px 22px rgba(7, 27, 53, 0.09);
+}
+
+.contact-icon {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff7df;
+    border-radius: 12px;
+    font-size: 23px;
+}
+
+.contact-item h3 {
+    color: #071b35;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.contact-item p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* =========================================
+   CONTACT FORM CARD
+========================================= */
+
+.contact-form {
+    width: 100%;
+    background: #ffffff;
+    padding: 38px;
+    border-radius: 18px;
+    box-sizing: border-box;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 12px 35px rgba(7, 27, 53, 0.08);
+}
+
+.contact-form h3 {
+    color: #071b35;
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+/* =========================================
+   FORM LAYOUT
+========================================= */
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+/* INPUTS */
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px 16px;
+    background: #f8fafc;
+    border: 1px solid #dbe3ec;
+    border-radius: 8px;
+    outline: none;
+    box-sizing: border-box;
+
+    color: #071b35;
+    font-family: inherit;
+    font-size: 14px;
+
+    transition: all 0.25s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #94a3b8;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: #dcae32;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(220, 174, 50, 0.12);
+}
+
+.contact-form select {
+    cursor: pointer;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+/* =========================================
+   SEND ENQUIRY BUTTON
+========================================= */
+
+.contact-form button {
+    width: 100%;
+    padding: 16px;
+    background: #071b35;
+    color: #ffffff;
+
+    border: 1px solid #071b35;
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #102d52;
+    border-color: #102d52;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(7, 27, 53, 0.18);
+}
+
+/* =========================================
+   SUCCESS MESSAGE
+========================================= */
+
+.success-message {
+    color: #15803d;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    padding: 13px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* =========================================
+   LARGE DESKTOP
+========================================= */
+
+@media (min-width: 1400px) {
+    .contact {
+        padding: 100px 9%;
+        gap: 85px;
+    }
+
+    .contact-content h2 {
+        font-size: 43px;
+    }
+
+    .contact-form {
+        padding: 45px;
+    }
+}
+
+/* =========================================
+   IPAD PRO / SMALL LAPTOP
+========================================= */
+
+@media (min-width: 1025px) and (max-width: 1399px) {
+    .contact {
+        padding: 75px 5%;
+        gap: 40px;
+    }
+
+    .contact-content h2 {
+        font-size: 33px;
+    }
+
+    .contact-form {
+        padding: 30px;
+    }
+}
+
+/* =========================================
+   IPAD MINI / TABLETS
+========================================= */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .contact {
+        grid-template-columns: 1fr;
+        padding: 65px 6%;
+        gap: 40px;
+    }
+
+    .contact-content h2 {
+        font-size: 34px;
+    }
+
+    .contact-description {
+        max-width: 650px;
+    }
+
+    .contact-details {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-form {
+        padding: 35px;
+    }
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 600px) {
+    .contact {
+        grid-template-columns: 1fr;
+        padding: 50px 18px;
+        gap: 35px;
+    }
+
+    .contact-content h2 {
+        font-size: 28px;
+    }
+
+    .contact-description {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .contact-details {
+        gap: 14px;
+    }
+
+    .contact-item {
+        padding: 15px;
+        gap: 14px;
+    }
+
+    .contact-icon {
+        width: 45px;
+        height: 45px;
+        min-width: 45px;
+        font-size: 20px;
+    }
+
+    .contact-item h3 {
+        font-size: 15px;
+    }
+
+    .contact-item p {
+        font-size: 13px;
+        overflow-wrap: anywhere;
+    }
+
+    .contact-form {
+        padding: 23px 18px;
+        border-radius: 13px;
+    }
+
+    .contact-form h3 {
+        font-size: 22px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+        padding: 14px;
+        font-size: 14px;
+    }
+}
+
+/* =========================================
+   EXTRA SMALL PHONES
+========================================= */
+
+@media (max-width: 360px) {
+    .contact {
+        padding: 40px 12px;
+    }
+
+    .contact-content h2 {
+        font-size: 25px;
+    }
+
+    .contact-form {
+        padding: 20px 14px;
+    }
+
+    .contact-form h3 {
+        font-size: 20px;
+    }
+}

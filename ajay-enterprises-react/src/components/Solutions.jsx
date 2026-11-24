@@ -1,6 +1,7 @@
 import { useState } from "react";
 import products from "../data/products";
 import ProductDetails from "./ProductDetails";
+import "./Solutions.css";
 
 function Solutions() {
   const [activeCategory, setActiveCategory] = useState("Ventilators");

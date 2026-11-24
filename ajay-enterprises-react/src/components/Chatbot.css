@@ -1,0 +1,239 @@
+
+/* =========================================
+   CHATBOT - RESPONSIVE DESIGN
+========================================= */
+
+.chat-widget {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 2000;
+}
+
+/* CHAT TOGGLE BUTTON */
+
+.chat-toggle {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #dcae32;
+    color: #071b35;
+
+    font-size: 25px;
+    cursor: pointer;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    transition: transform 0.25s ease;
+}
+
+.chat-toggle:hover {
+    transform: scale(1.08);
+}
+
+/* CHAT WINDOW */
+
+.chat-box {
+    width: 360px;
+    height: 480px;
+
+    max-width: calc(100vw - 32px);
+    max-height: calc(100dvh - 100px);
+
+    display: flex;
+    flex-direction: column;
+
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+/* HEADER */
+
+.chat-header {
+    flex-shrink: 0;
+
+    padding: 18px 20px;
+
+    background: #071b35;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chat-header h3 {
+    font-size: 17px;
+    margin-bottom: 4px;
+}
+
+.chat-header p {
+    font-size: 12px;
+    color: #dcae32;
+}
+
+.close-chat {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* CHAT BODY */
+
+.chat-body {
+    flex: 1;
+    min-height: 0;
+
+    padding: 18px;
+
+    overflow-y: auto;
+    overscroll-behavior: contain;
+
+    background: #f7f9fc;
+}
+
+.bot-message,
+.user-message {
+    max-width: 85%;
+    padding: 11px 14px;
+
+    border-radius: 10px;
+    margin-bottom: 12px;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.bot-message {
+    background: white;
+    color: #333;
+    margin-right: auto;
+}
+
+.user-message {
+    background: #071b35;
+    color: white;
+    margin-left: auto;
+}
+
+/* FAQ BUTTONS */
+
+.faq-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 11px 12px;
+
+    background: white;
+    color: #071b35;
+
+    border: 1px solid #dcae32;
+    border-radius: 7px;
+
+    text-align: left;
+    font-size: 12px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.faq-question:hover {
+    background: #dcae32;
+}
+
+/* TABLET */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    .chat-widget {
+        right: 20px;
+        bottom: 20px;
+    }
+
+    .chat-box {
+        width: 350px;
+        height: 460px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .chat-widget {
+        right: 16px;
+        bottom: max(16px, env(safe-area-inset-bottom));
+    }
+
+    .chat-toggle {
+        width: 52px;
+        height: 52px;
+        font-size: 23px;
+    }
+
+    .chat-box {
+        width: calc(100vw - 32px);
+        height: min(460px, calc(100dvh - 90px));
+        max-width: none;
+        border-radius: 12px;
+    }
+
+    .chat-header {
+        padding: 15px;
+    }
+
+    .chat-body {
+        padding: 14px;
+    }
+}
+
+/* SMALL PHONES */
+
+@media (max-width: 360px) {
+
+    .chat-widget {
+        right: 12px;
+        bottom: 12px;
+    }
+
+    .chat-toggle {
+        width: 48px;
+        height: 48px;
+    }
+
+    .chat-box {
+        width: calc(100vw - 24px);
+    }
+}
+/* Ensure chatbot stays above all sections */
+
+.chat-widget {
+    position: fixed !important;
+    right: 24px;
+    bottom: 24px;
+    z-index: 9999;
+    isolation: isolate;
+}
+
+@media (max-width: 600px) {
+    .chat-widget {
+        right: 16px;
+        bottom: max(16px, env(safe-area-inset-bottom));
+    }
+}
