@@ -34,15 +34,18 @@ function Navbar({ searchQuery, onSearch }) {
 
             {/* MOBILE MENU BUTTON */}
 
-            <button
-                className="menu-toggle"
-                onClick={() => setMenuOpen(!menuOpen)}
-                aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
-                aria-expanded={menuOpen}
-                aria-controls="main-navigation"
-            >
-                {menuOpen ? "✕" : "☰"}
-            </button>
+            
+<button
+    type="button"
+    className="menu-toggle"
+    onClick={() => setMenuOpen(!menuOpen)}
+    aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+    aria-expanded={menuOpen}
+    aria-controls="main-navigation"
+>
+    {menuOpen ? "✕" : "☰"}
+</button>
+
 
             {/* NAVIGATION LINKS */}
 
