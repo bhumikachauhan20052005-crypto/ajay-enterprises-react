@@ -1,18 +1,42 @@
+
 import { useState } from "react";
 import products from "../data/products";
 import ProductDetails from "./ProductDetails";
 import "./solutions.css";
 
-function Solutions() {
+function Solutions({ searchQuery, clearSearch }) {
   const [activeCategory, setActiveCategory] = useState("Ventilators");
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   const categories = Object.keys(products);
 
-  const currentProducts = products[activeCategory] || [];
+  // All products from every category
+  const allProducts = Object.entries(products).flatMap(
+    ([category, items]) =>
+      items.map((product) => ({
+        ...product,
+        category
+      }))
+  );
 
-  // Agar View Details click hua hai,
-  // toh Products section ki jagah Product Details dikhao
+  // Search across name, brand, description and category
+  const filteredProducts = allProducts.filter((product) => {
+    const query = searchQuery.trim().toLowerCase();
+
+    return (
+      product.name?.toLowerCase().includes(query) ||
+      product.brand?.toLowerCase().includes(query) ||
+      product.description?.toLowerCase().includes(query) ||
+      product.category?.toLowerCase().includes(query)
+    );
+  });
+
+  // Show search results or selected category products
+  const currentProducts = searchQuery.trim()
+    ? filteredProducts
+    : products[activeCategory] || [];
+
+  // Product Details
   if (selectedProduct) {
     return (
       <ProductDetails
@@ -50,19 +74,29 @@ function Solutions() {
                   ? "category-btn active"
                   : "category-btn"
               }
-              onClick={() => setActiveCategory(category)}
+              onClick={() => {
+                setActiveCategory(category);
+                if (clearSearch) clearSearch();
+              }}
             >
               {category}
             </button>
           ))}
         </div>
 
+        {/* SEARCH RESULTS */}
+        {searchQuery.trim() && (
+          <p className="search-results-count">
+            {filteredProducts.length} products found for "{searchQuery}"
+          </p>
+        )}
+
         {/* PRODUCTS GRID */}
         <div className="products-grid">
+
           {currentProducts.map((product, index) => (
             <div className="product-card" key={index}>
 
-              {/* PRODUCT IMAGE */}
               <div className="product-image-container">
                 <img
                   src={product.image}
@@ -71,7 +105,6 @@ function Solutions() {
                 />
               </div>
 
-              {/* PRODUCT INFO */}
               <div className="product-content">
 
                 <p className="product-brand">
@@ -90,7 +123,6 @@ function Solutions() {
                   {product.price || "Price on Request"}
                 </p>
 
-                {/* VIEW DETAILS */}
                 <button
                   className="view-details-btn"
                   onClick={() => setSelectedProduct(product)}
@@ -101,7 +133,27 @@ function Solutions() {
               </div>
             </div>
           ))}
+
         </div>
+
+        {/* NO RESULTS */}
+        {currentProducts.length === 0 && (
+          <div className="no-products">
+            <h3>No Products Found</h3>
+            <p>
+              Try searching with another product name, brand or category.
+            </p>
+
+            {searchQuery.trim() && (
+              <button
+                className="view-details-btn"
+                onClick={clearSearch}
+              >
+                Clear Search
+              </button>
+            )}
+          </div>
+        )}
 
       </div>
     </section>

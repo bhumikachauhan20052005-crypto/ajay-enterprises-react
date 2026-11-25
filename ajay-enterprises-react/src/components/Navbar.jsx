@@ -5,10 +5,15 @@ import "../Navbar.css";
 function Navbar({ searchQuery, onSearch }) {
 
     const [menuOpen, setMenuOpen] = useState(false);
+function handleSearch(value) {
+    onSearch?.(value);
 
-    function handleSearch(value) {
-        onSearch?.(value);
+    if (value.trim()) {
+        document
+            .getElementById("solutions")
+            ?.scrollIntoView({ behavior: "smooth" });
     }
+}
 
     function closeMenu() {
         setMenuOpen(false);
