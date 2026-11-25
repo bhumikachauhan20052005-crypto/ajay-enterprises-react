@@ -26,7 +26,7 @@ function Contact() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const phoneNumber = "919717071038";
+        const phoneNumber = "919599116826";
 
         const whatsappMessage = `
 Hello Ajay Enterprises!
@@ -78,7 +78,7 @@ Please contact me with further details.
                         <div className="contact-icon">📞</div>
                         <div>
                             <h3>Call Us</h3>
-                            <p>+91 XXXXX XXXXX</p>
+                            <p>+91 9599116826</p>
                         </div>
                     </div>
 
@@ -86,7 +86,7 @@ Please contact me with further details.
                         <div className="contact-icon">✉️</div>
                         <div>
                             <h3>Email Us</h3>
-                            <p>info@ajayenterprises.com</p>
+                            <p>surgicalequipmenthub@gmail.com</p>
                         </div>
                     </div>
 

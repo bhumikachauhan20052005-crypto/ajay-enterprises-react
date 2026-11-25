@@ -44,7 +44,7 @@ const services = [
 function RepairService() {
 
   // Replace with your actual WhatsApp business number
-const phoneNumber = "919717071038";
+const phoneNumber = "919599116826";
 
   const openWhatsApp = (serviceName = "General Service Enquiry") => {
     const message = `Hello Ajay Enterprises,
