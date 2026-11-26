@@ -1,16 +1,24 @@
+
 import "./ProductDetails.css";
-
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
 
 function ProductDetails({ product, onBack }) {
+
     const [selectedImage, setSelectedImage] = useState(
-    product?.images?.[0] || product?.image
-);
+        product?.images?.[0] || product?.image
+    );
 
-if (!product) return null;
+    useEffect(() => {
+        setSelectedImage(product?.images?.[0] || product?.image);
+    }, [product]);
 
-    const images = product.images || [product.image];
+    if (!product) return null;
+
+    const images = product.images?.length
+        ? product.images
+        : product.image
+            ? [product.image]
+            : [];
 
     return (
         <section className="product-details-page">
@@ -21,14 +29,16 @@ if (!product) return null;
 
             <div className="product-details-container">
 
-                {/* LEFT SIDE - IMAGES */}
+                {/* LEFT SIDE - PRODUCT IMAGES */}
                 <div className="product-gallery">
 
                     <div className="main-product-image">
-                        <img
-                            src={selectedImage}
-                            alt={product.name}
-                        />
+                        {selectedImage && (
+                            <img
+                                src={selectedImage}
+                                alt={product.name}
+                            />
+                        )}
                     </div>
 
                     {images.length > 1 && (
@@ -51,7 +61,7 @@ if (!product) return null;
 
                 </div>
 
-                {/* RIGHT SIDE - PRODUCT INFO */}
+                {/* RIGHT SIDE - PRODUCT INFORMATION */}
                 <div className="product-info">
 
                     <p className="product-brand">
@@ -61,12 +71,12 @@ if (!product) return null;
                     <h1>{product.name}</h1>
 
                     {product.category && (
-    <p className="product-category">
-        {product.category}
-    </p>
-)}
+                        <p className="product-category">
+                            {product.category}
+                        </p>
+                    )}
 
-                    <h3>Price on Request</h3>
+                    <h3>{product.price || "Price on Request"}</h3>
 
                     <p className="product-description">
                         {product.description ||
@@ -89,6 +99,71 @@ if (!product) return null;
                 </div>
 
             </div>
+
+            {/* PRODUCT QUALITY */}
+            {product.quality && (
+                <div className="product-extra-section">
+                    <h2>Product Overview</h2>
+                    <p>{product.quality}</p>
+                </div>
+            )}
+
+            {/* PRODUCT FEATURES */}
+            {product.features?.length > 0 && (
+                <div className="product-extra-section">
+                    <h2>Key Features</h2>
+
+                    <ul className="product-features-list">
+                        {product.features.map((feature, index) => (
+                            <li key={index}>
+                                {feature}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            )}
+
+            {/* PRODUCT SPECIFICATIONS */}
+            {product.specifications &&
+                Object.keys(product.specifications).length > 0 && (
+
+                <div className="product-extra-section">
+                    <h2>Technical Specifications</h2>
+
+                    <div className="specifications-table">
+                        {Object.entries(product.specifications).map(
+                            ([key, value]) => (
+                                <div
+                                    className="specification-row"
+                                    key={key}
+                                >
+                                    <span>{key}</span>
+                                    <strong>{value}</strong>
+                                </div>
+                            )
+                        )}
+                    </div>
+                </div>
+            )}
+
+            {/* DELIVERY AND AVAILABILITY */}
+            {(product.delivery || product.availability) && (
+                <div className="product-extra-section">
+                    <h2>Availability & Delivery</h2>
+
+                    {product.delivery && (
+                        <p>
+                            <strong>Delivery:</strong> {product.delivery}
+                        </p>
+                    )}
+
+                    {product.availability && (
+                        <p>
+                            <strong>Availability:</strong> {product.availability}
+                        </p>
+                    )}
+                </div>
+            )}
 
         </section>
     );

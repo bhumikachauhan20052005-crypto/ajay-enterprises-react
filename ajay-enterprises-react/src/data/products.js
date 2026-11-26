@@ -46,6 +46,38 @@ import contecCMS5100Image3 from "../assets/patientmonitor/Contec CMS 5100 Patien
 import contecCMS5100Image4 from "../assets/patientmonitor/Contec CMS 5100 Patient Monitor 3 Parameter4.png";
 
 
+import lifepak20_1 from "../assets/defibrillator/Medtronic Lifepak™ 20 Defibrillator1.jpg";
+import lifepak20_2 from "../assets/defibrillator/Medtronic Lifepak™ 20 Defibrillator2.jpg";
+import lifepak20_3 from "../assets/defibrillator/Medtronic Lifepak™ 20 Defibrillator3.jpg";
+import lifepak20_4 from "../assets/defibrillator/Medtronic Lifepak™ 20 Defibrillator4.jpg";
+import lifepak20_5 from "../assets/defibrillator/Medtronic Lifepak™ 20 Defibrillator5.jpg";
+
+import philipsHeartstartXL from "../assets/defibrillator/philips-heartstart-xl.jpg";
+
+import philipsXLPlus1 from "../assets/defibrillator/PHILIPS HEARTSTART XL+ DEFIBRILLATOR1.jpg";
+import philipsXLPlus2 from "../assets/defibrillator/PHILIPS HEARTSTART XL+ DEFIBRILLATOR2.jpg";
+import philipsXLPlus3 from "../assets/defibrillator/PHILIPS HEARTSTART XL+ DEFIBRILLATOR3.jpg";
+import philipsXLPlus4 from "../assets/defibrillator/PHILIPS HEARTSTART XL+ DEFIBRILLATOR4.jpg";
+import philipsXLPlus5 from "../assets/defibrillator/PHILIPS HEARTSTART XL+ DEFIBRILLATOR5.jpg";
+
+
+
+import efficiaDFM100_1 from "../assets/defibrillator/Efficia DFM100 defibrillator1.jpg";
+import efficiaDFM100_2 from "../assets/defibrillator/Efficia DFM100 defibrillator2.jpg";
+
+import philipsFRx2 from "../assets/defibrillator/Philips HeartStart FRx AED Defibrillator2.jpg";
+import philipsFRx1 from "../assets/defibrillator/Philips HeartStart FRx AED Defibrillator1.jpg";
+
+import bplDefib2 from "../assets/defibrillator/BPL Defibrillator2.JPG";
+
+
+import philipsHS1_1 from "../assets/defibrillator/Phillips HeartStart HS1 AED Defibrillator1.jpg";
+import philipsHS1_2 from "../assets/defibrillator/Phillips HeartStart HS1 AED Defibrillator2.jpg";
+import philipsHS1_3 from "../assets/defibrillator/Phillips HeartStart HS1 AED Defibrillator3.jpg";
+
+import philipsMRx1 from "../assets/defibrillator/ Philips Heartstart Mrx Defibrillator1.jpg";
+import philipsMRx2 from "../assets/defibrillator/ Philips Heartstart Mrx Defibrillator2.jpg";
+import philipsMRx3 from "../assets/defibrillator/ Philips Heartstart Mrx Defibrillator3.jpg";
 // CATEGORY IMAGES USED BY RESTORED PRODUCTS
 import ventilatorImage from "../assets/ventilatorImage.jpg";
 import ecgImage from "../assets/ecg.jpg";
@@ -787,77 +819,563 @@ const products = {
   // ==========================================
 
   Defibrillators: [
-    {
-      brand: "ZOLL",
-      name: "ZOLL M Series Defibrillator",
-      image: defibrillatorImage,
-      images: [defibrillatorImage],
-      price: "Contact for Price",
-      description:
-        "Professional defibrillator and patient monitoring system for clinical environments.",
-      quality: "Professional medical equipment.",
-      features: [
-        "Defibrillation capability",
-        "Patient monitoring",
-        "Suitable for emergency care",
-      ],
-      delivery: "Confirm with supplier",
-      availability: "Enquire for Availability",
-    },
 
     {
-      brand: "ZOLL",
-      name: "ZOLL R Series Defibrillator",
-      image: defibrillatorImage,
-      images: [defibrillatorImage],
-      price: "Contact for Price",
-      description:
-        "Advanced defibrillator designed for professional emergency and critical-care environments.",
-      quality: "Professional medical equipment.",
-      features: [
-        "Advanced defibrillation",
-        "Patient monitoring",
-        "Emergency care support",
-      ],
-      delivery: "Confirm with supplier",
-      availability: "Enquire for Availability",
+        name: "Philips HeartStart XL Defibrillator",
+        brand: "Philips",
+
+        image: philipsHeartstartXL,
+
+        images: [
+            philipsHeartstartXL
+        ],
+
+        price: "Price on Request",
+
+        description:
+            "We are a unique entity in this industry, actively engaged in offering a premium quality array of Philips HeartStart XL Defibrillator.",
+
+        quality:
+            "Designed to meet resuscitation and monitoring needs with lightweight and portable construction.",
+
+        features: [
+            "AED Mode and Manual Mode operation",
+            "Low energy SMART Biphasic waveform",
+            "Delivers up to 200 joules in less than three seconds",
+            "ECG Monitoring with 3 or 5 lead patient cable",
+            "Synchronized cardioversion",
+            "Noninvasive pacing (optional)",
+            "Up to 100 hours of monitoring on battery power",
+            "50 cycles of 200-joule charge-shock on battery power"
+        ],
+
+        specifications: {
+            "Voltage": "220 V",
+            "Brand": "Philips",
+            "Frequency": "50/60 Hz",
+            "Phase": "Single Phase",
+            "Power Source": "Electric",
+            "Usage": "Hospital"
+        },
+
+        delivery: "Available across India",
+
+        availability: "Contact us for availability"
+    },
+    
+{
+    name: "PHILIPS HEARTSTART XL+ DEFIBRILLATOR",
+
+    brand: "PHILIPS",
+
+    image: philipsXLPlus1,
+
+    images: [
+        philipsXLPlus1,
+        philipsXLPlus2,
+        philipsXLPlus3,
+        philipsXLPlus4,
+        philipsXLPlus5
+    ],
+
+    price: "Price on Request",
+
+    description:
+        "The Philips HeartStart XL+ is a lightweight, portable defibrillator and monitor. It provides four clinical modes of operation: Monitor, Manual Defibrillation, AED, and Pacer. The XL+ performs automated tests on a regular basis and stores critical event and trend data in its internal memory.",
+
+    quality:
+        "The Philips HeartStart XL+ is designed for professional resuscitation and patient monitoring. It combines multiple clinical operating modes with automated readiness testing and internal data storage.",
+
+    features: [
+
+        "Four Operating Modes: Monitor, Manual Defibrillation, AED and optional Pacer modes",
+
+        "Philips SMART Biphasic therapy",
+
+        "Patient Category Switching between Adult and Infant/Child settings in AED mode",
+
+        "Automatic adjustment of shock energy and alarm limits according to patient category",
+
+        "ECG Monitoring with 3-lead or 5-lead patient cable",
+
+        "Optional SpO2 Monitoring",
+
+        "Optional Non-Invasive Blood Pressure (NBP) Monitoring",
+
+        "Optional EtCO2 Monitoring",
+
+        "Visible ready-for-use indicator",
+
+        "Automated self-tests for device readiness",
+
+        "Internal memory stores up to 8 hours of trended vital signs and event data",
+
+        "USB data transfer"
+    ],
+
+    specifications: {
+
+        "Model Name/Number": "HEARTSTRT XL+",
+
+        "Brand": "PHILIPS",
+
+        "Usage/Application": "ICU"
+
     },
 
-    {
-      brand: "Philips",
-      name: "Philips HeartStart XL Defibrillator",
-      image: defibrillatorImage,
-      images: [defibrillatorImage],
-      price: "Contact for Price",
-      description:
-        "Professional defibrillator and monitoring system for hospital and emergency applications.",
-      quality: "Professional medical equipment.",
-      features: [
-        "Defibrillation",
-        "Patient monitoring",
-        "Clinical use",
-      ],
-      delivery: "Confirm with supplier",
-      availability: "Enquire for Availability",
+    delivery: "Available across India",
+
+    availability: "Contact us for availability"
+
+},
+
+
+    
+{
+    name: "Philips Efficia DFM100 Defibrillator",
+
+    brand: "PHILIPS",
+
+    image: efficiaDFM100_1,
+
+    images: [
+        efficiaDFM100_1,
+        efficiaDFM100_2
+    ],
+
+    price: "Price on Request",
+
+    description:
+        "The Philips Efficia DFM100 is a portable monitor/defibrillator designed for hospital, ICU, and emergency transport use. It supports multiple therapy modes including manual defibrillation, synchronized cardioversion, optional AED, and non-invasive pacing. The device also provides patient monitoring and automated readiness testing.",
+
+    quality:
+        "A professional portable defibrillator and patient monitoring system featuring a 7-inch colour display, integrated thermal printer, automated self-tests and internal event data storage.",
+
+    features: [
+
+        "Manual Defibrillation and Synchronized Cardioversion",
+
+        "Optional Semi-Automated External Defibrillation (AED) for adult and infant/child patients",
+
+        "Optional Non-Invasive Transcutaneous Pacing",
+
+        "Philips SMART Biphasic Truncated Exponential waveform technology",
+
+        "Energy delivery up to 200 Joules",
+
+        "Charging to 150 J in under 5 seconds with a fully charged battery",
+
+        "3-lead and 5-lead ECG monitoring",
+
+        "SpO2 Monitoring",
+
+        "Non-Invasive Blood Pressure (NBP) Monitoring",
+
+        "Mainstream and Sidestream EtCO2 monitoring",
+
+        "Visual Ready For Use (RFU) indicator",
+
+        "Automated self-tests",
+
+        "7-inch colour display",
+
+        "Integrated thermal printer",
+
+        "Up to 8 hours of event and trend data storage"
+    ],
+
+    specifications: {
+
+        "Brand": "PHILIPS",
+
+        "Model": "Efficia DFM100",
+
+        "Product Type": "Monitor / Defibrillator",
+
+        "Usage/Application": "Hospital, ICU and Emergency Transport",
+
+        "Dimensions": "23.5 × 29 × 20.5 cm (H × W × D)",
+
+        "Weight": "Approximately 5.66 kg without battery",
+
+        "Weight with Battery": "Approximately 6.1 kg",
+
+        "Power Source": "Rechargeable Lithium-ion Battery and AC Mains Power",
+
+        "Display": "7-inch Colour Display",
+
+        "Waveform": "SMART Biphasic Truncated Exponential",
+
+        "Maximum Energy": "200 Joules",
+
+        "Data Storage": "Up to 8 Hours"
     },
 
-    {
-      brand: "Physio-Control",
-      name: "LIFEPAK 20 Defibrillator",
-      image: defibrillatorImage,
-      images: [defibrillatorImage],
-      price: "Contact for Price",
-      description:
-        "Defibrillator and patient monitoring equipment for emergency medical environments.",
-      quality: "Professional medical equipment.",
-      features: [
-        "Defibrillation support",
-        "Patient monitoring",
-        "Emergency care use",
-      ],
-      delivery: "Confirm with supplier",
-      availability: "Enquire for Availability",
+    delivery: "Available across India",
+
+    availability: "Contact us for availability"
+},
+
+    
+  
+{
+    name: "Philips HeartStart FRx AED Defibrillator",
+
+    brand: "PHILIPS",
+
+    image: philipsFRx1,
+
+    images: [
+        philipsFRx1,
+        philipsFRx2
+    ],
+
+    price: "Price on Request",
+
+    description:
+        "The Philips HeartStart FRx AED (Model 861304) is a rugged, portable automated external defibrillator designed for first responders treating sudden cardiac arrest. It provides clear voice instructions and guided therapy to support emergency response.",
+
+    quality:
+        "Designed for durability and portability, the HeartStart FRx features SMART Analysis, SMART Biphasic therapy, automated self-tests and visual and voice guidance for emergency use.",
+
+    features: [
+
+        "Rugged and portable design weighing approximately 1.6 kg",
+
+        "IP55 rating for dust and water resistance",
+
+        "Designed to withstand drops from approximately 1.2 metres",
+
+        "SMART Biphasic therapy with 150 J nominal adult energy",
+
+        "SMART Analysis automatically checks heart rhythms",
+
+        "Quick Shock technology",
+
+        "Pre-connected SMART Pads II for adult and pediatric use",
+
+        "Optional Infant/Child Key for pediatric therapy",
+
+        "Voice instructions and visual icons",
+
+        "Audible metronome and CPR coaching",
+
+        "Automated self-tests",
+
+        "Blinking green Ready Indicator",
+
+        "Battery life of approximately 4 years"
+    ],
+
+    specifications: {
+
+        "Model Name/Number": "861304",
+
+        "Brand": "PHILIPS",
+
+        "Product Type": "Automated External Defibrillator (AED)",
+
+        "Therapy": "SMART Biphasic",
+
+        "Adult Energy": "150 J nominal",
+
+        "Pediatric Energy": "50 J nominal with Infant/Child Key",
+
+        "Weight": "Approximately 1.6 kg",
+
+        "Protection Rating": "IP55",
+
+        "Drop Resistance": "Approximately 1.2 metres",
+
+        "Battery": "Approximately 4 years",
+
+        "Usage/Application": "Emergency Care, Hospitals and First Responders"
     },
+
+    delivery: "Available across India",
+
+    availability: "Contact us for availability"
+},
+
+
+{
+    name: "Philips HeartStart HS1 AED Defibrillator",
+
+    brand: "PHILIPS",
+
+    image: philipsHS1_1,
+
+    images: [
+        philipsHS1_1,
+        philipsHS1_2,
+        philipsHS1_3
+    ],
+
+    price: "Price on Request",
+
+    description:
+        "The Philips HeartStart HS1 AED Defibrillator offers real-time voice guidance, helping users through each step of the emergency response process, from placing the pads to performing CPR. It is designed to support users during sudden cardiac arrest emergencies.",
+
+    quality:
+        "A portable automated external defibrillator designed to provide real-time voice instructions and step-by-step guidance during emergency cardiac response.",
+
+    features: [
+
+        "Real-time voice guidance during emergency response",
+
+        "Step-by-step instructions for placing defibrillator pads",
+
+        "Guidance through the CPR process",
+
+        "Designed for automated external defibrillation",
+
+        "Portable design for emergency use",
+
+        "Visual and voice-guided user assistance"
+
+    ],
+
+    specifications: {
+
+        "Brand": "PHILIPS",
+
+        "Model": "HeartStart HS1",
+
+        "SKU": "PH-HE-AED-1000",
+
+        "Product Type": "Automated External Defibrillator (AED)",
+
+        "Usage": "Emergency Cardiac Care",
+
+        "Guidance": "Real-time Voice Guidance",
+
+        "Application": "Sudden Cardiac Arrest Response"
+
+    },
+
+    delivery: "Free standard delivery within India (subject to confirmation)",
+
+    availability: "Contact us for availability"
+
+},
+
+
+{
+    name: "Philips HeartStart MRx Monitor Defibrillator",
+
+    brand: "PHILIPS",
+
+    image: philipsMRx1,
+
+    images: [
+        philipsMRx1,
+        philipsMRx2,
+        philipsMRx3
+    ],
+
+    price: "Price on Request",
+
+    description:
+        "The Philips HeartStart MRx (models M3535A/M3536A) is a portable clinical monitor/defibrillator designed for hospitals and EMS use by trained medical professionals. It combines defibrillation, pacing and multiparameter patient monitoring in a single unit.",
+
+    quality:
+        "A professional clinical monitoring and defibrillation system designed to support emergency cardiac care, patient monitoring and resuscitation.",
+
+    features: [
+
+        "Four Operating Modes: Monitor, Manual Defibrillation, AED and optional Non-Invasive Pacing",
+
+        "Philips SMART Biphasic waveform technology",
+
+        "External defibrillation energy up to 200 Joules",
+
+        "AED mode with 150 Joules nominal energy",
+
+        "Internal defibrillation up to 50 Joules",
+
+        "Charging time under 5 seconds to 200J",
+
+        "Optional Q-CPR real-time feedback for chest compression rate, depth and release",
+
+        "3-lead, 5-lead and 10-lead ECG monitoring",
+
+        "Optional 12-lead ECG",
+
+        "SpO2 monitoring",
+
+        "Non-Invasive Blood Pressure (NBP/NIBP) monitoring",
+
+        "EtCO2 monitoring",
+
+        "Invasive pressure monitoring",
+
+        "Continuous temperature monitoring",
+
+        "Up to 12 hours of trended vital signs data"
+    ],
+
+    specifications: {
+
+        "Model": "M3535A / M3536A",
+
+        "Brand": "PHILIPS",
+
+        "Product Type": "Clinical Monitor / Defibrillator",
+
+        "Operating Modes": "Monitor, Manual, AED and Pacing (optional)",
+
+        "Maximum External Energy": "200 Joules",
+
+        "AED Energy": "150 Joules",
+
+        "Internal Defibrillation": "Up to 50 Joules",
+
+        "ECG": "3, 5 or 10 Lead",
+
+        "Display": "8.4-inch Colour LCD",
+
+        "Weight": "Approximately 6 kg",
+
+        "Power Source": "Rechargeable Lithium-ion Battery",
+
+        "Data Storage": "Up to 12 Hours",
+
+        "Usage/Application": "Hospitals and Emergency Medical Services"
+    },
+
+    delivery: "Available across India",
+
+    availability: "Contact us for availability"
+},
+
+
+{
+    name: "Medtronic LIFEPAK 20 Defibrillator",
+
+    brand: "Medtronic",
+
+    image: lifepak20_1,
+
+    images: [
+        lifepak20_1,
+        lifepak20_2,
+        lifepak20_3,
+        lifepak20_4,
+        lifepak20_5
+    ],
+
+    price: "Price on Request",
+
+    description:
+        "The Medtronic LIFEPAK 20 is a hospital-focused defibrillator and monitor designed for crash carts and emergency care. It combines automatic external defibrillation (AED) and manual defibrillation with patient monitoring.",
+
+    quality:
+        "A professional hospital defibrillator and monitoring system designed to support emergency cardiac care and resuscitation.",
+
+    features: [
+
+        "Semi-automatic AED and Manual Defibrillation modes",
+
+        "Biphasic defibrillation energy up to 360 Joules",
+
+        "Synchronized cardioversion",
+
+        "ECG patient monitoring",
+
+        "Non-invasive pacing",
+
+        "Optional SpO2 monitoring",
+
+        "Optional EtCO2 monitoring",
+
+        "Integrated printer/recorder",
+
+        "AC power with internal backup battery",
+
+        "Designed for hospital crash carts and emergency care"
+
+    ],
+
+    specifications: {
+
+        "Model Name/Number": "LIFEPAK 20",
+
+        "Brand": "Medtronic / Physio-Control",
+
+        "Product Type": "Defibrillator and Patient Monitor",
+
+        "Defibrillation Mode": "AED and Manual",
+
+        "Maximum Energy": "Up to 360 Joules",
+
+        "Therapy": "Biphasic",
+
+        "Monitoring": "ECG",
+
+        "Pacing": "Non-Invasive Pacing",
+
+        "Power Source": "AC Power with Internal Backup Battery",
+
+        "Weight": "Approximately 5.5–5.6 kg",
+
+        "Usage/Application": "Hospital / ICU / Emergency Care"
+    },
+
+    delivery: "Available across India",
+
+    availability: "Contact us for availability"
+},
+
+{
+    name: "BPL Relife 900 / AED/R Defibrillator",
+
+    brand: "BPL",
+
+    image: bplDefib2,
+images: [bplDefib2],
+
+    price: "Price on Request",
+
+    description:
+        "The BPL Relife 900 / AED/R is a biphasic defibrillator designed for hospitals, ICUs and emergency cardiac care. It features a 7-inch colour TFT display, selectable energy settings and synchronized cardioversion.",
+
+    quality:
+        "A professional biphasic defibrillation system designed to support emergency cardiac care and patient resuscitation.",
+
+    features: [
+        "Biphasic defibrillation technology",
+        "7-inch Colour TFT Display",
+        "Selectable energy from 2J to 300J",
+        "Synchronized cardioversion",
+        "24-event recording",
+        "Optional AED mode",
+        "Optional SpO2 monitoring",
+        "Optional NIBP monitoring",
+        "Optional Non-invasive pacing",
+        "Optional Capnography (CO2)",
+        "Approximately 100 shocks at 300J on a full battery"
+    ],
+
+    specifications: {
+        "Brand": "BPL",
+        "Model Name/Number": "Relife 900 / AED/R",
+        "Product Type": "Biphasic Defibrillator",
+        "Display": "7-inch Colour TFT",
+        "Energy Selection": "2J to 300J",
+        "Cardioversion": "Synchronized",
+        "Event Recording": "24 Events",
+        "AED Mode": "Optional",
+        "SpO2": "Optional",
+        "NIBP": "Optional",
+        "Pacing": "Optional",
+        "Capnography": "Optional"
+    },
+
+   
+  }
+
+
+
   ],
 
 
